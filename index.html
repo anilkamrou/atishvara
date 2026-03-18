@@ -394,6 +394,10 @@
             align-items: center;
             overflow: hidden;
             background: var(--primary);
+            background-image: url('images/cctv1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
         /* Animated gradient background */
@@ -403,7 +407,7 @@
             background:
                 radial-gradient(ellipse 80% 60% at 70% 50%, rgba(232,114,12,0.12) 0%, transparent 60%),
                 radial-gradient(ellipse 60% 80% at 20% 30%, rgba(36,54,96,0.9) 0%, transparent 70%),
-                linear-gradient(135deg, #0d1b35 0%, #1a2b4a 40%, #1e3460 100%);
+                linear-gradient(135deg, rgba(13,27,53,0.92) 0%, rgba(26,43,74,0.88) 40%, rgba(30,52,96,0.88) 100%);
             z-index: 0;
         }
 
@@ -635,12 +639,16 @@
         .service-card {
             background: var(--white);
             border-radius: var(--radius-md);
-            padding: 38px 32px;
+            padding: 0;
             box-shadow: var(--shadow-sm);
             border: 1px solid rgba(26,43,74,0.06);
             transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
             position: relative;
             overflow: hidden;
+        }
+
+        .service-card-body {
+            padding: 38px 32px;
         }
 
         .service-card::before {
@@ -652,6 +660,7 @@
             transform: scaleX(0);
             transform-origin: left;
             transition: transform var(--transition);
+            z-index: 1;
         }
 
         .service-card:hover {
@@ -661,6 +670,15 @@
         }
 
         .service-card:hover::before { transform: scaleX(1); }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--radius-md) var(--radius-md) 0 0;
+            margin-bottom: 0;
+            display: block;
+        }
 
         .service-icon {
             width: 68px;
@@ -756,11 +774,10 @@
         }
 
         .about-shield-icon {
-            position: relative;
+            position: absolute;
             z-index: 1;
             font-size: 7rem;
             color: rgba(255,255,255,0.12);
-            position: absolute;
             right: -20px;
             bottom: -20px;
         }
@@ -936,6 +953,73 @@
             color: rgba(232,114,12,0.4);
             margin-bottom: 10px;
         }
+
+        /* =============================================
+           GALLERY SECTION
+        ============================================= */
+        .gallery-section { background: var(--off-white); }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--radius-md);
+            height: 260px;
+            box-shadow: var(--shadow-md);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img { transform: scale(1.08); }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(transparent, rgba(26,43,74,0.85));
+            color: white;
+            padding: 1.5rem 1rem 1rem;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay { transform: translateY(0); }
+        .gallery-overlay span { font-weight: 600; font-size: 1rem; }
+
+        /* =============================================
+           TESTIMONIALS SECTION
+        ============================================= */
+        .testimonials-section { background: var(--primary); }
+        .testimonials-section .section-header h2,
+        .testimonials-section .section-title { color: white; }
+        .testimonials-section .section-header p,
+        .testimonials-section .section-desc { color: var(--mid-gray); }
+        .testimonials-section .section-tag { background: rgba(232,114,12,0.2); color: var(--accent); }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.07);
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: var(--radius-md);
+            padding: 2rem;
+            color: white;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .testimonial-card:hover { transform: translateY(-6px); background: rgba(255,255,255,0.12); }
+        .testimonial-card .stars { color: var(--accent); font-size: 1.2rem; margin-bottom: 1rem; }
+        .testimonial-card p { color: rgba(255,255,255,0.82); line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-author img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent); }
+        .testimonial-author strong { display: block; color: white; font-size: 0.95rem; }
+        .testimonial-author span { color: var(--accent); font-size: 0.82rem; }
 
         /* =============================================
            CONTACT SECTION
@@ -1388,6 +1472,8 @@
             .footer-grid { grid-template-columns: 1fr; gap: 28px; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+            .testimonials-grid { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
@@ -1398,6 +1484,7 @@
             .stats-grid { grid-template-columns: 1fr; }
             .stat-item { border-bottom: 1px solid rgba(255,255,255,0.08); border-right: none; }
             .stat-item:last-child { border-bottom: none; }
+            .gallery-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1440,9 +1527,7 @@
         <div class="container">
             <nav class="nav-inner">
                 <a href="#home" class="logo">
-                    <div class="logo-icon">
-                        <i class="fas fa-shield-halved"></i>
-                    </div>
+                    <img src="images/logo.png" alt="Atishvara Digital Services Logo" style="height:55px; width:auto; object-fit:contain;">
                     <div class="logo-text-wrap">
                         <span class="logo-text">Atishvara</span>
                         <span class="logo-sub">Digital Services</span>
@@ -1452,6 +1537,7 @@
                 <ul class="nav-links">
                     <li><a href="#home" class="active">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact" class="nav-cta">Contact Us</a></li>
                 </ul>
@@ -1464,6 +1550,7 @@
         <div class="mobile-nav" id="mobileNav">
             <a href="#home">Home</a>
             <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
             <a href="#about">About</a>
             <a href="#contact">Contact Us</a>
         </div>
@@ -1555,62 +1642,120 @@
             <div class="services-grid">
                 <!-- Card 1 -->
                 <div class="service-card fade-up delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-video"></i>
+                    <img src="images/cctv2.jpg" alt="CCTV Camera" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3 class="service-title">CCTV Cameras</h3>
+                        <p class="service-desc">High-definition surveillance cameras to keep your property secure. From indoor domes to outdoor PTZ cameras with night vision and remote monitoring.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">CCTV Cameras</h3>
-                    <p class="service-desc">High-definition surveillance cameras to keep your property secure. From indoor domes to outdoor PTZ cameras with night vision and remote monitoring.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="service-card fade-up delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                    <img src="images/smart-home.png" alt="Smart Home" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="service-title">Smart Home</h3>
+                        <p class="service-desc">Innovative smart home solutions to automate and enhance your living experience. Control lighting, security, and appliances from anywhere.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">Smart Home</h3>
-                    <p class="service-desc">Innovative smart home solutions to automate and enhance your living experience. Control lighting, security, and appliances from anywhere.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="service-card fade-up delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-fingerprint"></i>
+                    <img src="images/security-door.jpg" alt="Security Door" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-fingerprint"></i>
+                        </div>
+                        <h3 class="service-title">Security Doors / Biometric Attendance</h3>
+                        <p class="service-desc">Stylish and strong doors to protect your home or office, combined with advanced biometric attendance systems for accurate access control.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">Security Doors / Biometric Attendance</h3>
-                    <p class="service-desc">Stylish and strong doors to protect your home or office, combined with advanced biometric attendance systems for accurate access control.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="service-card fade-up delay-1">
-                    <div class="service-icon">
-                        <i class="fas fa-network-wired"></i>
+                    <img src="images/networking.jpg" alt="Networking Equipment" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="service-title">Networking</h3>
+                        <p class="service-desc">High-performance networking equipment to keep your network running smoothly. Structured cabling, Wi-Fi solutions, and network security for business and home.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">Networking</h3>
-                    <p class="service-desc">High-performance networking equipment to keep your network running smoothly. Structured cabling, Wi-Fi solutions, and network security for business and home.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="service-card fade-up delay-2">
-                    <div class="service-icon">
-                        <i class="fas fa-tools"></i>
+                    <img src="images/installation.jpg" alt="Installation Services" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="service-title">Installation Services</h3>
+                        <p class="service-desc">Professional installation services to ensure your security systems are set up correctly. Our certified technicians handle everything from survey to commissioning.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">Installation Services</h3>
-                    <p class="service-desc">Professional installation services to ensure your security systems are set up correctly. Our certified technicians handle everything from survey to commissioning.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="service-card fade-up delay-3">
-                    <div class="service-icon">
-                        <i class="fas fa-plug"></i>
+                    <img src="images/accessories.png" alt="Security Accessories" class="service-img">
+                    <div class="service-card-body">
+                        <div class="service-icon">
+                            <i class="fas fa-plug"></i>
+                        </div>
+                        <h3 class="service-title">Accessories</h3>
+                        <p class="service-desc">Essential accessories to enhance your security setup. Cables, mounts, power supplies, storage solutions, and more to complete your installation.</p>
+                        <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
                     </div>
-                    <h3 class="service-title">Accessories</h3>
-                    <p class="service-desc">Essential accessories to enhance your security setup. Cables, mounts, power supplies, storage solutions, and more to complete your installation.</p>
-                    <span class="service-arrow"><i class="fas fa-arrow-right"></i> Learn More</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =============================================
+         PRODUCT GALLERY SECTION
+    ============================================= -->
+    <section id="gallery" class="section-pad gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag fade-up">Our Products</span>
+                <h2 class="section-title fade-up delay-1">Product <span>Gallery</span></h2>
+                <div class="divider fade-up delay-2"></div>
+                <p class="section-desc fade-up delay-3">Explore our range of high-quality security products</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item fade-up delay-1">
+                    <img src="images/dome.jpg" alt="Dome Camera" loading="lazy">
+                    <div class="gallery-overlay"><span>Dome Camera</span></div>
+                </div>
+                <div class="gallery-item fade-up delay-2">
+                    <img src="images/bullet.jpg" alt="Bullet Camera" loading="lazy">
+                    <div class="gallery-overlay"><span>Bullet Camera</span></div>
+                </div>
+                <div class="gallery-item fade-up delay-3">
+                    <img src="images/ptz.jpg" alt="PTZ Camera" loading="lazy">
+                    <div class="gallery-overlay"><span>PTZ Camera</span></div>
+                </div>
+                <div class="gallery-item fade-up delay-1">
+                    <img src="images/fingerprint.jpg" alt="Biometric System" loading="lazy">
+                    <div class="gallery-overlay"><span>Biometric System</span></div>
+                </div>
+                <div class="gallery-item fade-up delay-2">
+                    <img src="images/cctv5.jpg" alt="CCTV System" loading="lazy">
+                    <div class="gallery-overlay"><span>CCTV System</span></div>
+                </div>
+                <div class="gallery-item fade-up delay-3">
+                    <img src="images/cctv7.jpg" alt="Security Camera" loading="lazy">
+                    <div class="gallery-overlay"><span>Security Camera</span></div>
                 </div>
             </div>
         </div>
@@ -1630,6 +1775,7 @@
                     </div>
                     <div class="about-visual-box">
                         <i class="fas fa-shield-halved about-shield-icon"></i>
+                        <img src="images/cctv6.jpg" alt="Security Monitoring" style="width:100%; height:100%; object-fit:cover; border-radius: var(--radius-md); position:absolute; inset:0; z-index:0; opacity:0.35;">
                         <div class="about-visual-content">
                             <div class="about-visual-icon">
                                 <i class="fas fa-shield-halved"></i>
@@ -1713,6 +1859,45 @@
             </div>
         </div>
     </div>
+
+    <!-- =============================================
+         TESTIMONIALS SECTION
+    ============================================= -->
+    <section id="testimonials" class="section-pad testimonials-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag fade-up">Testimonials</span>
+                <h2 class="section-title fade-up delay-1">What Our <span>Customers Say</span></h2>
+                <div class="divider fade-up delay-2"></div>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-up delay-1">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Atishvara installed CCTV cameras at our office in Mohali. Excellent service, professional team and top-quality equipment. Highly recommended!"</p>
+                    <div class="testimonial-author">
+                        <img src="images/customer.jpg" alt="Customer" loading="lazy">
+                        <div><strong>Rajesh Sharma</strong><span>Business Owner, Mohali</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up delay-2">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"We got our smart home system installed by Atishvara. The team was knowledgeable and completed the work on time. Very satisfied with the results."</p>
+                    <div class="testimonial-author">
+                        <img src="images/customer2.jpg" alt="Customer" loading="lazy">
+                        <div><strong>Priya Verma</strong><span>Homeowner, Paonta Sahib</span></div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-up delay-3">
+                    <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p>"Best security solution provider in the region. Their biometric attendance system has really improved our office management. Great support team!"</p>
+                    <div class="testimonial-author">
+                        <img src="images/customer3.jpg" alt="Customer" loading="lazy">
+                        <div><strong>Amit Thakur</strong><span>Manager, Una HP</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- =============================================
          CONTACT SECTION
@@ -1850,9 +2035,7 @@
                 <!-- Brand -->
                 <div class="footer-brand">
                     <a href="#home" class="logo">
-                        <div class="logo-icon">
-                            <i class="fas fa-shield-halved"></i>
-                        </div>
+                        <img src="images/logo.png" alt="Atishvara Digital Services Logo" style="height:48px; width:auto; object-fit:contain;">
                         <div class="logo-text-wrap">
                             <span class="logo-text">Atishvara</span>
                             <span class="logo-sub">Digital Services</span>
@@ -1875,6 +2058,7 @@
                     <ul class="footer-links">
                         <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
                         <li><a href="#services"><i class="fas fa-chevron-right"></i> Services</a></li>
+                        <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
                         <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
                         <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
                     </ul>
@@ -2020,7 +2204,7 @@
                 const update = () => {
                     current += increment;
                     if (current < target) {
-                        counter.textContent = Math.floor(current) + (target >= 1000 ? '+' : '+');
+                        counter.textContent = Math.floor(current) + '+';
                         setTimeout(update, stepTime);
                     } else {
                         counter.textContent = target + '+';
