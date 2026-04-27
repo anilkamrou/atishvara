@@ -38,10 +38,30 @@
     border-bottom: 1px solid rgba(232,114,12,0.2);
   }
   .logo {
+    display: flex; align-items: center; gap: 0.75rem;
+    text-decoration: none;
+  }
+  .logo img {
+    height: 44px;
+    width: auto;
+    display: block;
+  }
+  .logo-text {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
     color: var(--gold);
     letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .logo-text span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
   }
   .nav-links { display: flex; gap: 2.5rem; list-style: none; }
   .nav-links a {
@@ -340,13 +360,55 @@
   .price-features li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); }
 
   /* CONTACT */
-  .contact { background: var(--deep); text-align: center; }
-  .contact-sub { color: var(--muted); margin: 1rem auto 2.5rem; max-width: 500px; line-height: 1.7; }
-  .contact-form {
-    max-width: 520px; margin: 0 auto;
-    display: flex; flex-direction: column; gap: 1rem;
+  .contact { background: var(--deep); }
+  .contact-inner {
+    display: grid; grid-template-columns: 1fr 1.4fr;
+    gap: 5rem; margin-top: 3rem;
   }
+  .contact-info-col { display: flex; flex-direction: column; gap: 0.5rem; }
+  .contact-info-col > p { color: var(--muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1.2rem; background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: border-color 0.3s;
+    margin-bottom: 0.8rem;
+    text-decoration: none; color: var(--white);
+  }
+  .contact-item:hover { border-color: rgba(232,114,12,0.3); }
+  .contact-icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .contact-item-text h4 {
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.3rem;
+  }
+  .contact-item-text span { font-size: 0.95rem; color: var(--white); display: block; }
+  .contact-item-text p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; margin: 0; }
+  .availability {
+    margin-top: 0.5rem; padding: 1.2rem 1.5rem;
+    background: rgba(232,114,12,0.07);
+    border-left: 3px solid var(--gold);
+  }
+  .availability h4 {
+    font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.8rem;
+  }
+  .avail-row {
+    display: flex; justify-content: space-between;
+    font-size: 0.83rem; color: var(--muted);
+    padding: 0.3rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .avail-row:last-child { border-bottom: none; }
+  .avail-row span:last-child { color: var(--white); }
+  .contact-form-col h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700; margin-bottom: 0.5rem;
+  }
+  .contact-form-col h2 em { font-style: italic; color: var(--gold); }
+  .contact-form-col > p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.7; }
+  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-group label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
   .contact-form input,
   .contact-form select,
   .contact-form textarea {
@@ -355,16 +417,23 @@
     color: var(--white);
     padding: 0.9rem 1.2rem;
     font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    width: 100%;
-    transition: border-color 0.3s;
-    outline: none;
+    font-size: 0.9rem; width: 100%;
+    transition: border-color 0.3s; outline: none;
   }
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder { color: rgba(154,165,184,0.5); }
   .contact-form input:focus,
   .contact-form select:focus,
   .contact-form textarea:focus { border-color: var(--gold); }
-  .contact-form select option { background: var(--card-bg); }
-  .contact-form textarea { resize: vertical; min-height: 110px; }
+  .contact-form select option { background: var(--deep); }
+  .contact-form textarea { resize: vertical; min-height: 130px; }
+  .success-msg {
+    display: none;
+    background: rgba(42,157,92,0.12);
+    border: 1px solid rgba(42,157,92,0.3);
+    color: #4ade80; padding: 1rem 1.2rem;
+    font-size: 0.88rem; line-height: 1.6;
+  }
 
   /* FOOTER */
   footer {
@@ -397,6 +466,9 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   /* RESPONSIVE */
+  @media (max-width: 900px) {
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+  }
   @media (max-width: 768px) {
     nav { padding: 1rem 1.5rem; }
     .nav-links { display: none; }
@@ -412,13 +484,16 @@
 <body>
 
 <nav>
-  <div class="logo">Atishvara <span style="color:var(--white);font-weight:400;font-style:italic;">Learning</span></div>
+  <a href="index.html" class="logo">
+    <img src="images/atishvara-logo.png" alt="Atishvara Learning">
+    <div class="logo-text">Atishvara Learning<span>Inner Intelligence. Higher Consciousness.</span></div>
+  </a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#subjects">Topics</a></li>
     <li><a href="#curriculum">Curriculum</a></li>
     <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Book Trial</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -427,9 +502,9 @@
   <div class="hero-bg"></div>
   <div class="formula-watermark">E=mc²</div>
   <div class="hero-content">
-    <div class="hero-tag">⚛ Physics · CBSE Class 11 &amp; 12 · Online · Worldwide</div>
+    <div class="hero-tag">⚛ Physics · CBSE Class 11 &amp; 12 · Online · India</div>
     <h1>Physics Made<br><em>Crystal Clear.</em></h1>
-    <p class="hero-sub">10+ years of classroom mastery, now available online for students around the world. From Mechanics to Modern Physics — build intuition, not just formulas.</p>
+    <p class="hero-sub">10+ years of classroom mastery, now available online for students across India. From Mechanics to Modern Physics — build intuition, not just formulas.</p>
     <div class="hero-stats">
       <div class="stat-item">
         <div class="stat-num">10+</div>
@@ -460,7 +535,7 @@
     <div class="about-text">
       <p>With over a decade of experience teaching CBSE Physics for Classes 11 and 12, I have helped hundreds of students transform their relationship with physics — from fear and confusion to confidence and clarity.</p>
       <p>My teaching philosophy centers on building <strong>conceptual intuition first</strong>, then applying it to problems. Students don't just memorize — they understand <em>why</em> things work the way they do.</p>
-      <p>Now fully online, I work with students across India, the Middle East, Southeast Asia, and beyond — all in their own time zones, at their own pace.</p>
+      <p>Now fully online, I work with students across India — from metros to tier-2 cities — all from the comfort of their homes.</p>
       <div class="highlight-box">"Physics is not about formulas. It's about seeing the world differently."</div>
     </div>
     <div class="about-cards">
@@ -471,8 +546,8 @@
       </div>
       <div class="about-card">
         <div class="about-card-icon">🌍</div>
-        <h4>Worldwide Online Sessions</h4>
-        <p>Flexible scheduling across time zones — Gulf, Europe, Southeast Asia, and more.</p>
+        <h4>Online Sessions Across India</h4>
+        <p>Flexible scheduling to fit school hours — mornings, evenings, and weekends.</p>
       </div>
       <div class="about-card">
         <div class="about-card-icon">📊</div>
@@ -726,39 +801,132 @@
 <section class="contact" id="contact">
   <div class="section-label">Get In Touch</div>
   <div class="section-title">Book Your <em>Free Trial</em></div>
-  <div class="gold-line" style="margin: 1rem auto 0;"></div>
-  <p class="contact-sub">Fill in your details and I'll get back to you within 24 hours to schedule your first session.</p>
-  <form class="contact-form reveal" onsubmit="handleSubmit(event)">
-    <div class="form-row">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Email Address" required>
+  <div class="gold-line"></div>
+  <div class="contact-inner reveal">
+
+    <!-- LEFT: Contact Info -->
+    <div class="contact-info-col">
+      <p>Whether you want to book a free trial, ask about a topic, or just understand what's right for your child — reach out on any of these channels. I usually respond within a few hours.</p>
+
+      <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-item">
+        <div class="contact-icon">💬</div>
+        <div class="contact-item-text">
+          <h4>WhatsApp</h4>
+          <span>+91 XXXXX XXXXX</span>
+          <p>Fastest response — usually within 1–2 hours</p>
+        </div>
+      </a>
+      <a href="mailto:hello@atishvara.com" class="contact-item">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-item-text">
+          <h4>Email</h4>
+          <span>hello@atishvara.com</span>
+          <p>For detailed queries, documents or schedules</p>
+        </div>
+      </a>
+      <a href="#" class="contact-item">
+        <div class="contact-icon">▶️</div>
+        <div class="contact-item-text">
+          <h4>YouTube</h4>
+          <span>Atishvara Learning</span>
+          <p>Free concept videos — subscribe for updates</p>
+        </div>
+      </a>
+      <a href="#" class="contact-item">
+        <div class="contact-icon">💼</div>
+        <div class="contact-item-text">
+          <h4>LinkedIn</h4>
+          <span>Atishvara Learning</span>
+          <p>Connect professionally</p>
+        </div>
+      </a>
+
+      <div class="availability">
+        <h4>Session Availability</h4>
+        <div class="avail-row"><span>Monday – Friday</span><span>6:00 AM – 9:00 PM IST</span></div>
+        <div class="avail-row"><span>Saturday</span><span>8:00 AM – 6:00 PM IST</span></div>
+        <div class="avail-row"><span>Sunday</span><span>By request only</span></div>
+        <div class="avail-row"><span>All sessions in</span><span>IST (India Standard Time)</span></div>
+      </div>
     </div>
-    <div class="form-row">
-      <select>
-        <option value="" disabled selected>Select Class</option>
-        <option>Class 11</option>
-        <option>Class 12</option>
-        <option>Both 11 & 12</option>
-      </select>
-      <select>
-        <option value="" disabled selected>Session Type</option>
-        <option>Free Trial</option>
-        <option>Regular 1-on-1</option>
-        <option>Group Batch</option>
-      </select>
+
+    <!-- RIGHT: Form -->
+    <div class="contact-form-col">
+      <h2>Send an <em>Enquiry</em></h2>
+      <p>Fill in the details below and I'll get back to you within 24 hours to confirm your slot or answer your questions.</p>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student-name">Student Name</label>
+            <input id="student-name" type="text" placeholder="Full name" required>
+          </div>
+          <div class="form-group">
+            <label for="parent-name">Parent / Guardian Name</label>
+            <input id="parent-name" type="text" placeholder="Full name">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input id="email" type="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="whatsapp">WhatsApp Number</label>
+            <input id="whatsapp" type="tel" placeholder="+91 XXXXX XXXXX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="class-select">Class</label>
+            <select id="class-select" required>
+              <option value="" disabled selected>Select class</option>
+              <option>Class 11</option>
+              <option>Class 12</option>
+              <option>Both 11 & 12</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="session-type">Session Type</label>
+            <select id="session-type">
+              <option value="" disabled selected>Select type</option>
+              <option>Free Trial (30 min)</option>
+              <option>Regular 1-on-1 (₹800/hr)</option>
+              <option>Group Batch (₹300/session)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="time-slot">Preferred Time Slot</label>
+          <select id="time-slot">
+            <option value="" disabled selected>Select a preferred slot</option>
+            <option>Morning (6 AM – 9 AM IST)</option>
+            <option>Late Morning (9 AM – 12 PM IST)</option>
+            <option>Afternoon (12 PM – 4 PM IST)</option>
+            <option>Evening (4 PM – 7 PM IST)</option>
+            <option>Night (7 PM – 9 PM IST)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="goals">Topics / Goals (optional)</label>
+          <textarea id="goals" placeholder="Which topics are you struggling with? Any upcoming exams? Anything else I should know..."></textarea>
+        </div>
+        <div class="success-msg" id="successMsg">
+          ✓ Your enquiry has been sent! I'll get back to you within 24 hours on WhatsApp or email.
+        </div>
+        <button type="submit" class="btn-primary">Send Enquiry →</button>
+      </form>
     </div>
-    <textarea placeholder="Tell me a bit about your goals or which topics you're struggling with..."></textarea>
-    <button type="submit" class="btn-primary">Send Enquiry →</button>
-  </form>
+
+  </div>
 </section>
 
 <footer>
   <p>© 2025 Atishvara Learning · CBSE Physics Class 11 & 12 · More Subjects Coming Soon</p>
   <div class="footer-links">
-    <a href="#">WhatsApp</a>
+    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
     <a href="#">YouTube</a>
     <a href="#">LinkedIn</a>
-    <a href="#">Email</a>
+    <a href="mailto:hello@atishvara.com">Email</a>
   </div>
 </footer>
 
@@ -777,11 +945,12 @@
 
   function handleSubmit(e) {
     e.preventDefault();
+    const msg = document.getElementById('successMsg');
+    msg.style.display = 'block';
     const btn = e.target.querySelector('button');
-    btn.textContent = '✓ Enquiry Sent!';
+    btn.textContent = '✓ Sent!';
     btn.style.background = '#2a9d5c';
-    btn.style.color = '#fff';
-    setTimeout(() => { btn.textContent = 'Send Enquiry →'; btn.style.background = ''; btn.style.color = ''; }, 3000);
+    msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 </script>
 </body>
