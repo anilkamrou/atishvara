@@ -1,842 +1,1224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- ── PRIMARY SEO ── -->
-<title>Atishvara Learning | Online CBSE Physics Tutor Class 11 & 12 | India</title>
-<meta name="description" content="Expert online Physics tuition for CBSE Class 11 & 12 students across India. 10+ years experience, 500+ students, JEE & NEET ready. Book a free 30-minute trial session today.">
-<meta name="keywords" content="CBSE Physics tutor online, Class 11 Physics tuition, Class 12 Physics tuition, online Physics teacher India, JEE Physics coaching, NEET Physics preparation, Atishvara Learning, NCERT Physics Class 11, NCERT Physics Class 12, physics doubt clearing, online tutor India">
-<meta name="author" content="Atishvara Learning">
-<meta name="robots" content="index, follow">
-<meta name="language" content="English">
-<meta name="revisit-after" content="7 days">
-<link rel="canonical" href="https://atishvara.com/">
-
-<!-- ── OPEN GRAPH (Facebook / WhatsApp / LinkedIn) ── -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://atishvara.com/">
-<meta property="og:title" content="Atishvara Learning | Online CBSE Physics Tutor Class 11 & 12">
-<meta property="og:description" content="Expert online Physics tuition for CBSE Class 11 & 12 students across India. 10+ years experience, 500+ students. Book a free trial today.">
-<meta property="og:image" content="https://atishvara.com/images/atishvara-logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Atishvara Learning">
-<meta property="og:locale" content="en_IN">
-
-<!-- ── TWITTER CARD ── -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://atishvara.com/">
-<meta name="twitter:title" content="Atishvara Learning | Online CBSE Physics Tutor">
-<meta name="twitter:description" content="Expert CBSE Physics tuition for Class 11 & 12 students in India. Book a free 30-min trial session.">
-<meta name="twitter:image" content="https://atishvara.com/images/atishvara-logo.png">
-
-<!-- ── STRUCTURED DATA (JSON-LD) ── -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "EducationalOrganization",
-  "name": "Atishvara Learning",
-  "url": "https://atishvara.com",
-  "logo": "https://atishvara.com/images/atishvara-logo.png",
-  "description": "Online CBSE Physics tuition for Class 11 and 12 students across India. Expert-led sessions covering Mechanics, Electrostatics, Optics, Modern Physics and more.",
-  "email": "hello@atishvara.com",
-  "areaServed": {
-    "@type": "Country",
-    "name": "India"
-  },
-  "knowsAbout": ["CBSE Physics", "Class 11 Physics", "Class 12 Physics", "JEE Physics", "NEET Physics", "NCERT Physics"],
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Physics Tuition Plans",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "name": "Free Trial Session",
-        "description": "30-minute 1-on-1 live Physics session. Topic of your choice.",
-        "price": "0",
-        "priceCurrency": "INR"
-      },
-      {
-        "@type": "Offer",
-        "name": "Regular 1-on-1 Session",
-        "description": "Personalized 1-hour live Physics session with doubt clearing, notes and WhatsApp support.",
-        "price": "800",
-        "priceCurrency": "INR"
-      },
-      {
-        "@type": "Offer",
-        "name": "Group Batch Session",
-        "description": "Structured Physics batch for 3–8 students with weekly tests and recorded sessions.",
-        "price": "300",
-        "priceCurrency": "INR"
-      }
-    ]
-  },
-  "sameAs": [
-    "https://www.youtube.com/@AtishvaraLearning",
-    "https://www.linkedin.com/company/atishvara-learning"
-  ]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What classes does Atishvara Learning offer Physics tuition for?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Atishvara Learning offers online Physics tuition for CBSE Class 11 and Class 12 students across India."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is there a free trial available?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. A free 30-minute 1-on-1 trial session is available for any topic of your choice. No payment required."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is the fee for regular 1-on-1 Physics sessions?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Regular 1-on-1 sessions are priced at ₹800 per hour. Group batch sessions are available at ₹300 per student per session."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Are sessions helpful for JEE and NEET preparation?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. All lessons cover both CBSE board exam preparation and competitive entrance exam readiness for JEE and NEET."
-      }
-    }
-  ]
-}
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>RetailCore POS — Modern POS Software for Indian Retail</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  :root {
-    --navy: #1a2b4a;
-    --deep: #111d33;
-    --gold: #e8720c;
-    --gold-light: #f08930;
-    --gold-dim: rgba(232,114,12,0.12);
-    --white: #f5f7fa;
-    --muted: #9aa5b8;
-    --card-bg: #243660;
-    --card-border: rgba(255,255,255,0.07);
-    --nav-h: 72px;
-    --max-w: 1200px;
-    --radius: 16px;
-    --radius-sm: 10px;
-  }
+/* ══════════════════════════════════════
+   RESET & VARIABLES
+══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  html { scroll-behavior: smooth; }
+:root {
+  --primary:   #1565C0;
+  --primary-d: #0d47a1;
+  --primary-l: #1976D2;
+  --secondary: #37474F;
+  --success:   #2E7D32;
+  --warning:   #E65100;
+  --danger:    #B71C1C;
+  --bg:        #FAFAFA;
+  --white:     #FFFFFF;
+  --gray-100:  #F5F7FA;
+  --gray-200:  #ECEFF4;
+  --gray-300:  #d0d8e8;
+  --gray-600:  #546E7A;
+  --gray-800:  #263238;
+  --text:      #1a2537;
+  --shadow-sm: 0 2px 8px rgba(21,101,192,.10);
+  --shadow-md: 0 8px 32px rgba(21,101,192,.15);
+  --shadow-lg: 0 20px 60px rgba(21,101,192,.20);
+  --radius:    14px;
+  --radius-sm: 8px;
+  --transition: .25s ease;
+}
 
-  body {
-    background: var(--navy);
-    color: var(--white);
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
+html { scroll-behavior: smooth; }
 
-  /* ── NAV ── */
-  nav {
-    position: fixed; top: 0; width: 100%; z-index: 200;
-    height: var(--nav-h);
-    padding: 0 3rem;
-    display: flex; justify-content: space-between; align-items: center;
-    background: rgba(26,43,74,0.55);
-    backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(232,114,12,0.15);
-    transition: background 0.35s, box-shadow 0.35s;
-  }
-  nav.scrolled {
-    background: rgba(17,29,51,0.97);
-    box-shadow: 0 4px 32px rgba(0,0,0,0.3);
-  }
-  .logo {
-    display: flex; align-items: center; gap: 0.75rem;
-    text-decoration: none; flex-shrink: 0;
-  }
-  .logo img { height: 40px; width: auto; display: block; }
-  .logo-text {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.15rem; font-weight: 700;
-    color: var(--gold); letter-spacing: -0.01em; line-height: 1.2;
-  }
-  .logo-text span {
-    display: block; font-size: 0.6rem; font-weight: 400;
-    color: var(--muted); letter-spacing: 0.14em;
-    text-transform: uppercase; font-family: 'Inter', sans-serif;
-  }
-  .nav-links { display: flex; gap: 0.25rem; list-style: none; }
-  .nav-links a {
-    color: rgba(245,247,250,0.75); text-decoration: none;
-    font-size: 0.88rem; font-weight: 500; letter-spacing: 0.02em;
-    padding: 0.5rem 0.9rem; border-radius: 8px;
-    transition: color 0.25s, background 0.25s;
-  }
-  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
-  .nav-cta {
-    background: var(--gold);
-    color: var(--deep) !important;
-    font-weight: 600 !important;
-    padding: 0.55rem 1.3rem !important;
-    border-radius: 50px !important;
-    transition: background 0.25s, transform 0.2s, box-shadow 0.25s !important;
-    box-shadow: 0 4px 18px rgba(232,114,12,0.35) !important;
-  }
-  .nav-cta:hover {
-    background: var(--gold-light) !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 6px 24px rgba(232,114,12,0.5) !important;
-  }
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--bg);
+  overflow-x: hidden;
+}
 
-  /* hamburger */
-  .hamburger {
-    display: none; flex-direction: column; gap: 5px;
-    background: none; border: none; cursor: pointer; padding: 4px;
-  }
-  .hamburger span {
-    display: block; width: 24px; height: 2px;
-    background: var(--white); border-radius: 2px;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-  .hamburger.open span:nth-child(2) { opacity: 0; }
-  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; }
+ul { list-style: none; }
 
-  /* mobile menu */
-  .mobile-menu {
-    display: none; position: fixed; inset: 0; top: var(--nav-h);
-    background: rgba(17,29,51,0.98); z-index: 199;
-    flex-direction: column; align-items: center; justify-content: center;
-    gap: 2rem;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    color: var(--white); text-decoration: none;
-    font-size: 1.3rem; font-weight: 600;
-    font-family: 'Space Grotesk', sans-serif;
-    transition: color 0.2s;
-  }
-  .mobile-menu a:hover { color: var(--gold); }
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
 
-  /* ── CONTAINER ── */
-  .container { max-width: var(--max-w); margin: 0 auto; width: 100%; }
+/* ══════════════════════════════════════
+   UTILITIES
+══════════════════════════════════════ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(21,101,192,.35);
+}
+.btn-primary:hover { background: var(--primary-d); box-shadow: 0 6px 24px rgba(21,101,192,.50); transform: translateY(-2px); }
+.btn-outline {
+  background: transparent;
+  color: var(--primary);
+  border-color: var(--primary);
+}
+.btn-outline:hover { background: var(--primary); color: #fff; transform: translateY(-2px); }
+.btn-white {
+  background: #fff;
+  color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+.btn-white:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.btn-lg { padding: 16px 36px; font-size: 16px; }
 
-  /* ── HERO ── */
-  .hero {
-    min-height: 100vh;
-    display: flex; align-items: center; justify-content: center;
-    padding: calc(var(--nav-h) + 4rem) 2rem 4rem;
-    position: relative; overflow: hidden;
-    text-align: center;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(ellipse 70% 55% at 50% 40%, rgba(232,114,12,0.09) 0%, transparent 65%),
-      radial-gradient(ellipse 60% 70% at 10% 90%, rgba(17,29,51,0.6) 0%, transparent 55%),
-      radial-gradient(ellipse 50% 50% at 90% 10%, rgba(36,54,96,0.4) 0%, transparent 50%);
-  }
-  .formula-watermark {
-    position: absolute; right: -2rem; top: 50%;
-    transform: translateY(-50%);
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(6rem, 16vw, 15rem);
-    font-style: italic; font-weight: 800;
-    color: rgba(232,114,12,0.04);
-    white-space: nowrap; pointer-events: none; line-height: 1;
-    letter-spacing: -0.04em;
-  }
-  .hero-content { position: relative; max-width: 720px; margin: 0 auto; }
+.badge {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .8px;
+}
+.badge-blue { background: rgba(21,101,192,.12); color: var(--primary); }
+.badge-green { background: rgba(46,125,50,.12); color: var(--success); }
+.badge-orange { background: rgba(230,81,0,.12); color: var(--warning); }
 
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 0.6rem;
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: var(--white);
-    font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em;
-    padding: 0.45rem 1.1rem; border-radius: 50px;
-    margin-bottom: 1.8rem;
-    animation: fadeUp 0.7s ease both;
-  }
-  .badge-dot {
-    width: 7px; height: 7px; border-radius: 50%;
-    background: var(--gold);
-    animation: pulse-dot 2s infinite;
-    flex-shrink: 0;
-  }
-  @keyframes pulse-dot {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.4); opacity: 0.6; }
-  }
+.section-label {
+  display: inline-block;
+  background: rgba(21,101,192,.10);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 6px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+.section-title { font-size: 38px; font-weight: 800; line-height: 1.2; color: var(--text); margin-bottom: 16px; }
+.section-sub { font-size: 17px; color: var(--gray-600); max-width: 600px; }
+.section-center { text-align: center; }
+.section-center .section-sub { margin: 0 auto; }
 
-  .hero h1 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(3rem, 6.5vw, 5.2rem);
-    line-height: 1.05; font-weight: 800;
-    letter-spacing: -0.03em;
-    animation: fadeUp 0.7s 0.1s ease both;
-  }
-  .hero h1 em { font-style: italic; color: var(--gold); }
+section { padding: 90px 0; }
 
-  .hero-sub {
-    margin-top: 1.5rem;
-    color: rgba(154,165,184,0.9);
-    font-size: 1.1rem; line-height: 1.75;
-    max-width: 540px; margin-left: auto; margin-right: auto;
-    animation: fadeUp 0.7s 0.2s ease both;
-  }
+/* ══════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════ */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(250,250,250,.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(21,101,192,.08);
+  transition: box-shadow var(--transition);
+}
+.navbar.scrolled { box-shadow: var(--shadow-sm); }
 
-  .hero-stats-bar {
-    display: flex; justify-content: center; gap: 0; margin-top: 3rem;
-    background: rgba(255,255,255,0.07);
-    backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: var(--radius);
-    overflow: hidden; max-width: 520px; margin-left: auto; margin-right: auto;
-    animation: fadeUp 0.7s 0.3s ease both;
-  }
-  .stat-item {
-    flex: 1; padding: 1.2rem 1rem; text-align: center;
-    border-right: 1px solid rgba(255,255,255,0.08);
-  }
-  .stat-item:last-child { border-right: none; }
-  .stat-num {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2rem; font-weight: 800;
-    color: var(--gold); line-height: 1;
-  }
-  .stat-num sup { font-size: 1rem; }
-  .stat-label {
-    font-size: 0.72rem; color: var(--muted);
-    text-transform: uppercase; letter-spacing: 0.1em; margin-top: 0.3rem;
-  }
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
 
-  .hero-cta {
-    display: flex; gap: 1rem; margin-top: 2.5rem; justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeUp 0.7s 0.4s ease both;
-  }
-  .btn-primary {
-    background: var(--gold);
-    color: var(--deep);
-    padding: 0.9rem 2.2rem;
-    border: none; cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem; font-weight: 600;
-    letter-spacing: 0.02em; text-decoration: none;
-    border-radius: 50px;
-    box-shadow: 0 6px 24px rgba(232,114,12,0.4);
-    transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
-    display: inline-block;
-  }
-  .btn-primary:hover {
-    background: var(--gold-light);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 32px rgba(232,114,12,0.55);
-  }
-  .btn-secondary {
-    background: rgba(255,255,255,0.08);
-    backdrop-filter: blur(8px);
-    color: var(--white);
-    padding: 0.9rem 2.2rem;
-    border: 1.5px solid rgba(255,255,255,0.22);
-    cursor: pointer;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.95rem; font-weight: 500;
-    text-decoration: none; border-radius: 50px;
-    transition: border-color 0.25s, color 0.25s, background 0.25s;
-    display: inline-block;
-  }
-  .btn-secondary:hover {
-    border-color: var(--gold); color: var(--gold);
-    background: rgba(232,114,12,0.07);
-  }
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--primary);
+}
+.nav-logo .logo-icon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--primary), #0288D1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  flex-shrink: 0;
+}
 
-  /* ── SECTION COMMONS ── */
-  section { padding: 6rem 2rem; }
-  .section-header { margin-bottom: 3rem; }
-  .section-label {
-    font-size: 0.72rem; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--gold);
-    font-weight: 600; margin-bottom: 0.7rem; display: block;
-  }
-  .section-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2rem, 4vw, 2.9rem);
-    font-weight: 800; line-height: 1.15; letter-spacing: -0.02em;
-  }
-  .section-title em { font-style: italic; color: var(--gold); }
-  .gold-line {
-    width: 48px; height: 3px;
-    background: linear-gradient(90deg, var(--gold), rgba(232,114,12,0.2));
-    border-radius: 2px; margin-top: 1.2rem;
-  }
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.nav-links a {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--secondary);
+  transition: color var(--transition);
+}
+.nav-links a:hover { color: var(--primary); }
 
-  /* ── ABOUT ── */
-  .about { background: var(--deep); }
-  .about-grid {
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4.5rem; align-items: center;
-  }
-  .about-text p {
-    color: var(--muted); line-height: 1.9; margin-bottom: 1.2rem; font-size: 0.96rem;
-  }
-  .about-text strong { color: var(--white); }
-  .highlight-box {
-    background: rgba(232,114,12,0.07);
-    border-left: 3px solid var(--gold);
-    padding: 1.2rem 1.5rem; margin-top: 2rem;
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    font-family: 'Space Grotesk', sans-serif;
-    font-style: italic; font-size: 1.08rem;
-    color: var(--white); line-height: 1.6;
-  }
-  .about-cards { display: flex; flex-direction: column; gap: 1rem; }
-  .about-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 1.4rem 1.5rem; border-radius: var(--radius);
-    display: flex; align-items: flex-start; gap: 1rem;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-  }
-  .about-card:hover {
-    border-color: rgba(232,114,12,0.35);
-    transform: translateX(6px);
-    box-shadow: 0 6px 28px rgba(0,0,0,0.25);
-  }
-  .about-card-icon {
-    font-size: 1.6rem; flex-shrink: 0;
-    width: 46px; height: 46px; border-radius: 12px;
-    background: var(--gold-dim);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .about-card-body h4 { font-size: 0.95rem; font-weight: 600; margin-bottom: 0.25rem; }
-  .about-card-body p { font-size: 0.82rem; color: var(--muted); line-height: 1.6; }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
 
-  /* ── SUBJECTS ── */
-  .subjects-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-  .subject-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 2rem; border-radius: var(--radius);
-    position: relative; overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    cursor: default;
-  }
-  .subject-card::after {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0; height: 3px;
-    background: linear-gradient(90deg, var(--gold), rgba(232,114,12,0.1));
-    opacity: 0; transition: opacity 0.3s;
-  }
-  .subject-card:hover {
-    border-color: rgba(232,114,12,0.3);
-    transform: translateY(-6px);
-    box-shadow: 0 16px 48px rgba(0,0,0,0.3);
-  }
-  .subject-card:hover::after { opacity: 1; }
-  .subject-icon {
-    font-size: 2rem; margin-bottom: 1rem;
-    width: 52px; height: 52px; border-radius: 14px;
-    background: var(--gold-dim);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .subject-card h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.15rem; font-weight: 700; margin-bottom: 0.7rem;
-  }
-  .subject-card p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
-  .subject-topics { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .topic-tag {
-    font-size: 0.7rem; font-weight: 500;
-    background: rgba(232,114,12,0.1);
-    border: 1px solid rgba(232,114,12,0.2);
-    color: var(--gold-light);
-    padding: 0.25rem 0.65rem; border-radius: 50px;
-  }
+/* ══════════════════════════════════════
+   HERO
+══════════════════════════════════════ */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 55%, #0288D1 100%);
+  padding-top: 68px;
+  position: relative;
+  overflow: hidden;
+}
 
-  /* ── CURRICULUM ── */
-  .curriculum { background: var(--deep); }
-  .class-tabs {
-    display: flex; gap: 0.5rem; margin-bottom: 2.5rem;
-    background: rgba(255,255,255,0.05);
-    border-radius: 10px; padding: 4px;
-    width: fit-content;
-  }
-  .tab-btn {
-    background: none; border: none; cursor: pointer;
-    padding: 0.6rem 1.8rem; border-radius: 8px;
-    font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 500;
-    color: var(--muted);
-    transition: color 0.25s, background 0.25s, box-shadow 0.25s;
-  }
-  .tab-btn.active {
-    color: var(--white);
-    background: var(--card-bg);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  }
-  .tab-content { display: none; }
-  .tab-content.active { display: block; }
-  .curriculum-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 1rem;
-  }
-  .unit-card {
-    background: var(--card-bg);
-    border: 1px solid var(--card-border);
-    padding: 1.5rem; border-radius: var(--radius);
-    transition: border-color 0.3s, transform 0.3s;
-  }
-  .unit-card:hover { border-color: rgba(232,114,12,0.25); transform: translateY(-3px); }
-  .unit-num {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.9rem; font-weight: 800;
-    color: rgba(232,114,12,0.22); line-height: 1; margin-bottom: 0.5rem;
-  }
-  .unit-card h4 { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.6rem; }
-  .unit-card ul { list-style: none; }
-  .unit-card ul li {
-    font-size: 0.78rem; color: var(--muted);
-    padding: 0.28rem 0 0.28rem 1rem;
-    border-bottom: 1px solid rgba(255,255,255,0.04);
-    position: relative;
-  }
-  .unit-card ul li:last-child { border-bottom: none; }
-  .unit-card ul li::before {
-    content: '→'; position: absolute; left: 0;
-    color: var(--gold); font-size: 0.65rem; top: 0.3rem;
-  }
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -20%; right: -10%;
+  width: 70vw; height: 70vw;
+  background: radial-gradient(circle, rgba(255,255,255,.06) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -15%; left: -5%;
+  width: 50vw; height: 50vw;
+  background: radial-gradient(circle, rgba(2,136,209,.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
 
-  /* ── PRICING ── */
-  .pricing-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 1.5rem;
-  }
-  .price-card {
-    background: var(--card-bg);
-    border: 1.5px solid var(--card-border);
-    padding: 2.5rem 2rem; text-align: center;
-    border-radius: var(--radius);
-    transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-    position: relative;
-  }
-  .price-card.featured {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 4px rgba(232,114,12,0.1), 0 16px 48px rgba(0,0,0,0.3);
-  }
-  .price-card.featured::before {
-    content: 'Most Popular';
-    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
-    background: var(--gold); color: var(--deep);
-    font-size: 0.68rem; font-weight: 700;
-    letter-spacing: 0.12em; text-transform: uppercase;
-    padding: 0.3rem 1rem; border-radius: 50px;
-  }
-  .price-card:hover { transform: translateY(-6px); box-shadow: 0 20px 56px rgba(0,0,0,0.35); }
-  .price-card h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;
-  }
-  .price-amount {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 2.6rem; font-weight: 800;
-    color: var(--gold); line-height: 1; margin: 0.3rem 0;
-  }
-  .price-period { font-size: 0.8rem; color: var(--muted); margin-bottom: 1.5rem; }
-  .price-features { list-style: none; text-align: left; margin-bottom: 2rem; }
-  .price-features li {
-    font-size: 0.85rem; color: var(--muted);
-    padding: 0.55rem 0 0.55rem 1.4rem;
-    border-bottom: 1px solid rgba(255,255,255,0.05);
-    position: relative;
-  }
-  .price-features li:last-child { border-bottom: none; }
-  .price-features li::before {
-    content: '✓'; position: absolute; left: 0;
-    color: var(--gold); font-weight: 700;
-  }
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  padding: 80px 0;
+}
 
-  /* ── CONTACT ── */
-  .contact { background: var(--deep); }
-  .contact-inner {
-    display: grid; grid-template-columns: 1fr 1.5fr;
-    gap: 5rem;
-  }
-  .contact-info-col { display: flex; flex-direction: column; gap: 0; }
-  .contact-info-col > p { color: var(--muted); line-height: 1.8; font-size: 0.95rem; margin-bottom: 1.5rem; }
-  .contact-item {
-    display: flex; align-items: flex-start; gap: 1rem;
-    padding: 1.1rem 1.2rem; background: var(--card-bg);
-    border: 1px solid var(--card-border); border-radius: var(--radius-sm);
-    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    margin-bottom: 0.75rem; text-decoration: none; color: var(--white);
-  }
-  .contact-item:hover {
-    border-color: rgba(232,114,12,0.3);
-    transform: translateX(4px);
-    box-shadow: 0 6px 24px rgba(0,0,0,0.2);
-  }
-  .contact-icon {
-    font-size: 1.4rem; flex-shrink: 0;
-    width: 42px; height: 42px; border-radius: 10px;
-    background: var(--gold-dim);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .contact-item-text h4 {
-    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.25rem; font-weight: 600;
-  }
-  .contact-item-text span { font-size: 0.92rem; color: var(--white); display: block; }
-  .contact-item-text p { font-size: 0.78rem; color: var(--muted); line-height: 1.5; margin: 0; }
-  .availability {
-    margin-top: 0.5rem; padding: 1.2rem 1.4rem;
-    background: rgba(232,114,12,0.06);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  }
-  .availability h4 {
-    font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 0.8rem; font-weight: 600;
-  }
-  .avail-row {
-    display: flex; justify-content: space-between;
-    font-size: 0.82rem; color: var(--muted);
-    padding: 0.32rem 0; border-bottom: 1px solid rgba(255,255,255,0.05);
-  }
-  .avail-row:last-child { border-bottom: none; }
-  .avail-row span:last-child { color: var(--white); font-weight: 500; }
+.hero-content {}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.25);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+.hero-eyebrow .dot { width: 6px; height: 6px; background: #4FC3F7; border-radius: 50%; }
 
-  .contact-form-col h2 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.6rem; font-weight: 700; margin-bottom: 0.5rem;
-    letter-spacing: -0.01em;
-  }
-  .contact-form-col h2 em { font-style: italic; color: var(--gold); }
-  .contact-form-col > p { color: var(--muted); font-size: 0.88rem; margin-bottom: 1.5rem; line-height: 1.7; }
-  .contact-form { display: flex; flex-direction: column; gap: 1rem; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
-  .form-group label {
-    font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--muted); font-weight: 500;
-  }
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    background: var(--card-bg);
-    border: 1px solid rgba(255,255,255,0.1);
-    color: var(--white);
-    padding: 0.85rem 1.1rem;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem; width: 100%;
-    border-radius: var(--radius-sm);
-    transition: border-color 0.25s, box-shadow 0.25s; outline: none;
-  }
-  .contact-form input::placeholder,
-  .contact-form textarea::placeholder { color: rgba(154,165,184,0.45); }
-  .contact-form input:focus,
-  .contact-form select:focus,
-  .contact-form textarea:focus {
-    border-color: var(--gold);
-    box-shadow: 0 0 0 3px rgba(232,114,12,0.12);
-  }
-  .contact-form select option { background: var(--deep); }
-  .contact-form textarea { resize: vertical; min-height: 130px; }
-  .success-msg {
-    display: none;
-    background: rgba(42,157,92,0.12);
-    border: 1px solid rgba(42,157,92,0.3);
-    color: #4ade80; padding: 1rem 1.2rem;
-    font-size: 0.88rem; line-height: 1.6;
-    border-radius: var(--radius-sm);
-  }
+.hero h1 {
+  font-size: 54px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 22px;
+  letter-spacing: -1px;
+}
+.hero h1 .accent { color: #4FC3F7; }
 
-  /* ── FOOTER ── */
-  footer {
-    padding: 1.8rem 2rem;
-    border-top: 1px solid rgba(255,255,255,0.07);
-    display: flex; justify-content: space-between; align-items: center;
-    max-width: 100%;
-  }
-  footer p { font-size: 0.8rem; color: var(--muted); }
-  .footer-links { display: flex; gap: 1.5rem; }
-  .footer-links a {
-    font-size: 0.8rem; color: var(--muted); text-decoration: none;
-    transition: color 0.25s;
-  }
-  .footer-links a:hover { color: var(--gold); }
+.hero p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+  margin-bottom: 36px;
+  max-width: 480px;
+}
 
-  /* ── BACK TO TOP ── */
-  #back-top {
-    position: fixed; bottom: 1.8rem; right: 1.8rem; z-index: 150;
-    width: 44px; height: 44px; border-radius: 50%;
-    background: var(--gold); color: var(--deep);
-    border: none; cursor: pointer; font-size: 1.2rem;
-    display: flex; align-items: center; justify-content: center;
-    box-shadow: 0 4px 18px rgba(232,114,12,0.4);
-    opacity: 0; pointer-events: none;
-    transition: opacity 0.3s, transform 0.25s, box-shadow 0.25s;
-  }
-  #back-top.visible { opacity: 1; pointer-events: all; }
-  #back-top:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(232,114,12,0.55); }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 50px; }
 
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  .reveal {
-    opacity: 0; transform: translateY(32px);
-    transition: opacity 0.65s ease, transform 0.65s ease;
-  }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal-d1 { transition-delay: 0.15s; }
-  .reveal-d2 { transition-delay: 0.3s; }
-  .reveal-d3 { transition-delay: 0.45s; }
+.hero-stats {
+  display: flex;
+  gap: 32px;
+}
+.hero-stat {}
+.hero-stat .num { font-size: 28px; font-weight: 800; color: #fff; }
+.hero-stat .lbl { font-size: 13px; color: rgba(255,255,255,.65); margin-top: 2px; }
 
-  /* ── RESPONSIVE ── */
-  @media (max-width: 960px) {
-    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
-  }
-  @media (max-width: 768px) {
-    nav { padding: 0 1.5rem; }
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-    section { padding: 4rem 1.5rem; }
-    .hero { padding: calc(var(--nav-h) + 2.5rem) 1.5rem 3rem; }
-    .hero-stats-bar { flex-direction: column; max-width: 280px; }
-    .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .stat-item:last-child { border-bottom: none; }
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .form-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 1rem; text-align: center; }
-    .formula-watermark { display: none; }
-  }
+/* Mock screen */
+.hero-visual {
+  position: relative;
+}
+.mock-window {
+  background: #1a2537;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0,0,0,.5);
+  border: 1px solid rgba(255,255,255,.1);
+}
+.mock-titlebar {
+  background: #111827;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.mock-dot { width: 11px; height: 11px; border-radius: 50%; }
+.mock-dot-r { background: #FF5F57; }
+.mock-dot-y { background: #FFBD2E; }
+.mock-dot-g { background: #28C840; }
+.mock-titlebar-text { color: rgba(255,255,255,.4); font-size: 12px; margin-left: 8px; }
+
+.mock-body { padding: 20px; }
+
+.mock-topbar {
+  background: var(--primary);
+  border-radius: 8px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+.mock-topbar-title { color: #fff; font-weight: 700; font-size: 14px; }
+.mock-topbar-right { display: flex; gap: 8px; }
+.mock-chip {
+  background: rgba(255,255,255,.2);
+  color: #fff;
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+.mock-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 14px; }
+.mock-card {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 14px;
+}
+.mock-card-label { color: rgba(255,255,255,.5); font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+.mock-card-value { color: #fff; font-size: 20px; font-weight: 800; margin-top: 4px; }
+.mock-card-sub { color: rgba(255,255,255,.4); font-size: 10px; margin-top: 2px; }
+
+.mock-items {}
+.mock-item {
+  background: rgba(255,255,255,.04);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mock-item-left {}
+.mock-item-name { color: rgba(255,255,255,.85); font-size: 12px; font-weight: 600; }
+.mock-item-qty { color: rgba(255,255,255,.4); font-size: 11px; }
+.mock-item-price { color: #4FC3F7; font-size: 13px; font-weight: 700; }
+
+.mock-total {
+  background: rgba(21,101,192,.3);
+  border: 1px solid rgba(21,101,192,.5);
+  border-radius: 8px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.mock-total-label { color: rgba(255,255,255,.7); font-size: 12px; }
+.mock-total-value { color: #fff; font-size: 18px; font-weight: 800; }
+
+.mock-gst-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 14px;
+}
+.mock-gst-row span { color: rgba(255,255,255,.45); font-size: 11px; }
+.mock-gst-row .val { color: rgba(255,255,255,.65); }
+
+.mock-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 14px;
+}
+.mock-pay-btn {
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+.mock-pay-btn.cash { background: var(--success); color: #fff; }
+.mock-pay-btn.card { background: var(--primary); color: #fff; }
+.mock-pay-btn.upi { background: #6A1B9A; color: #fff; }
+
+.floating-badge {
+  position: absolute;
+  background: #fff;
+  border-radius: 12px;
+  padding: 12px 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.fb1 { top: 20px; right: -30px; }
+.fb2 { bottom: 30px; left: -30px; }
+.fb-icon { font-size: 22px; }
+.fb-title { font-size: 12px; font-weight: 700; color: var(--text); }
+.fb-sub { font-size: 11px; color: var(--gray-600); }
+
+/* ══════════════════════════════════════
+   TRUSTED BY
+══════════════════════════════════════ */
+.trusted {
+  padding: 40px 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  border-top: 1px solid var(--gray-200);
+}
+.trusted-inner {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.trusted-label { font-size: 13px; color: var(--gray-600); font-weight: 500; }
+.trusted-badges {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.trusted-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gray-600);
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+.trusted-item span { font-size: 20px; }
+
+/* ══════════════════════════════════════
+   PROBLEM / SOLUTION
+══════════════════════════════════════ */
+.problem { background: var(--gray-100); }
+
+.problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.pain-list { margin-top: 24px; }
+.pain-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--gray-200);
+}
+.pain-item:last-child { border-bottom: none; }
+.pain-icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(183,28,28,.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.pain-text h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.pain-text p { font-size: 14px; color: var(--gray-600); }
+
+.solution-card {
+  background: linear-gradient(135deg, var(--primary), #0288D1);
+  border-radius: 20px;
+  padding: 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.solution-card::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -20%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(255,255,255,.12), transparent 70%);
+  border-radius: 50%;
+}
+.solution-card h3 { font-size: 24px; font-weight: 800; margin-bottom: 20px; }
+.solution-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.solution-point .tick {
+  width: 24px;
+  height: 24px;
+  background: rgba(255,255,255,.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.solution-point p { font-size: 14px; color: rgba(255,255,255,.88); }
+
+/* ══════════════════════════════════════
+   FEATURES OVERVIEW
+══════════════════════════════════════ */
+.features { background: var(--white); }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
+.feat-card {
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  border: 1px solid var(--gray-200);
+  transition: all var(--transition);
+  cursor: default;
+}
+.feat-card:hover {
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--gray-300);
+}
+.feat-icon {
+  width: 52px;
+  height: 52px;
+  background: linear-gradient(135deg, var(--primary), #0288D1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+.feat-card h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.feat-card p { font-size: 14px; color: var(--gray-600); line-height: 1.6; }
+.feat-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+.feat-tag {
+  background: rgba(21,101,192,.08);
+  color: var(--primary);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 12px;
+}
+
+/* ══════════════════════════════════════
+   GST SPOTLIGHT
+══════════════════════════════════════ */
+.gst-section {
+  background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 60%, #0288D1 100%);
+  color: #fff;
+}
+
+.gst-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.gst-content .section-label { background: rgba(255,255,255,.15); color: #fff; }
+.gst-content .section-title { color: #fff; }
+.gst-content .section-sub { color: rgba(255,255,255,.78); }
+
+.gst-cards { margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.gst-mini {
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 12px;
+  padding: 18px;
+}
+.gst-mini h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.gst-mini p { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.6; }
+
+.gst-visual { position: relative; }
+.gst-panel {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  border-radius: 16px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+}
+.gst-panel h4 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 12px; }
+.gst-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+.gst-row:last-child { border-bottom: none; }
+.gst-row .gst-lbl { color: rgba(255,255,255,.65); font-size: 13px; }
+.gst-row .gst-val { color: #fff; font-size: 13px; font-weight: 600; }
+.gst-row .gst-val.green { color: #69F0AE; }
+.gst-row .gst-val.blue { color: #4FC3F7; }
+.gst-total-row {
+  display: flex;
+  justify-content: space-between;
+  background: rgba(255,255,255,.12);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 12px;
+}
+.gst-total-row .lbl { color: rgba(255,255,255,.8); font-weight: 700; }
+.gst-total-row .val { color: #fff; font-size: 18px; font-weight: 800; }
+
+/* ══════════════════════════════════════
+   HOW IT WORKS
+══════════════════════════════════════ */
+.how { background: var(--gray-100); }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin-top: 60px;
+  position: relative;
+}
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: calc(12.5% + 12px);
+  right: calc(12.5% + 12px);
+  height: 2px;
+  background: linear-gradient(to right, var(--primary), #0288D1);
+  z-index: 0;
+}
+
+.step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.step-num {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), #0288D1);
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  box-shadow: 0 6px 20px rgba(21,101,192,.4);
+  border: 4px solid var(--gray-100);
+}
+.step h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.step p { font-size: 13px; color: var(--gray-600); line-height: 1.6; }
+
+/* ══════════════════════════════════════
+   MULTI-STORE
+══════════════════════════════════════ */
+.multistore { background: var(--white); }
+
+.multistore-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.ms-visual {
+  background: var(--gray-100);
+  border-radius: 20px;
+  padding: 32px;
+  border: 1px solid var(--gray-200);
+}
+.ms-header {
+  background: var(--primary);
+  border-radius: 10px;
+  padding: 14px 18px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ms-stores { display: flex; flex-direction: column; gap: 12px; }
+.ms-store {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 14px 18px;
+  border: 1px solid var(--gray-200);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ms-store-name { font-weight: 700; font-size: 14px; color: var(--text); }
+.ms-store-loc { font-size: 12px; color: var(--gray-600); margin-top: 2px; }
+.ms-store-badge { font-size: 12px; font-weight: 600; color: var(--success); background: rgba(46,125,50,.1); padding: 3px 10px; border-radius: 12px; }
+
+.ms-points { margin-top: 28px; }
+.ms-point {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 22px;
+}
+.ms-point-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(21,101,192,.08);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+.ms-point h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.ms-point p { font-size: 14px; color: var(--gray-600); }
+
+/* ══════════════════════════════════════
+   PRICING
+══════════════════════════════════════ */
+.pricing { background: var(--gray-100); }
+
+.pricing-toggle {
+  display: inline-flex;
+  align-items: center;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 50px;
+  padding: 4px;
+  margin: 24px 0 48px;
+  gap: 4px;
+}
+.price-tab {
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: all var(--transition);
+}
+.price-tab.active { background: var(--primary); color: #fff; box-shadow: var(--shadow-sm); }
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.plan-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 2px solid var(--gray-200);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+.plan-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+.plan-card.popular {
+  border-color: var(--primary);
+  position: relative;
+}
+.popular-badge {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 18px;
+  border-radius: 0 0 10px 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.plan-header {
+  padding: 28px 28px 20px;
+  border-bottom: 1px solid var(--gray-200);
+}
+.plan-card.popular .plan-header { background: rgba(21,101,192,.03); }
+.plan-name { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 8px; }
+.plan-desc { font-size: 13px; color: var(--gray-600); margin-bottom: 20px; }
+.plan-price { display: flex; align-items: baseline; gap: 4px; }
+.plan-price .currency { font-size: 20px; font-weight: 700; color: var(--primary); }
+.plan-price .amount { font-size: 44px; font-weight: 900; color: var(--text); line-height: 1; }
+.plan-price .period { font-size: 13px; color: var(--gray-600); }
+
+.plan-body { padding: 24px 28px 28px; }
+.plan-features { margin-bottom: 24px; }
+.plan-feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--gray-800);
+  border-bottom: 1px solid var(--gray-100);
+}
+.plan-feat:last-child { border-bottom: none; }
+.plan-feat .tick { color: var(--success); font-size: 15px; font-weight: 700; flex-shrink: 0; }
+.plan-feat .cross { color: var(--gray-300); font-size: 16px; flex-shrink: 0; }
+.plan-btn { display: block; text-align: center; }
+
+/* ══════════════════════════════════════
+   TESTIMONIALS
+══════════════════════════════════════ */
+.testimonials { background: var(--white); }
+
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+.testi-card {
+  background: var(--gray-100);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--gray-200);
+  position: relative;
+}
+.testi-quote {
+  font-size: 48px;
+  color: var(--primary);
+  opacity: .25;
+  line-height: 1;
+  margin-bottom: 12px;
+  font-family: Georgia, serif;
+}
+.testi-text { font-size: 15px; color: var(--gray-800); line-height: 1.7; margin-bottom: 20px; }
+.testi-author { display: flex; align-items: center; gap: 12px; }
+.testi-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  flex-shrink: 0;
+}
+.av-blue { background: linear-gradient(135deg, var(--primary), #0288D1); }
+.av-green { background: linear-gradient(135deg, var(--success), #4CAF50); }
+.av-orange { background: linear-gradient(135deg, var(--warning), #FF9800); }
+.testi-name { font-size: 14px; font-weight: 700; color: var(--text); }
+.testi-role { font-size: 12px; color: var(--gray-600); }
+.testi-stars { color: #FFC107; font-size: 13px; margin-bottom: 4px; }
+
+/* ══════════════════════════════════════
+   CTA SECTION
+══════════════════════════════════════ */
+.cta-section {
+  background: linear-gradient(135deg, #0d1b4b 0%, #1565C0 55%, #0288D1 100%);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(255,255,255,.06), transparent 70%);
+  border-radius: 50%;
+}
+.cta-section h2 { font-size: 44px; font-weight: 900; color: #fff; margin-bottom: 16px; position: relative; z-index: 1; }
+.cta-section p { font-size: 18px; color: rgba(255,255,255,.78); margin-bottom: 36px; position: relative; z-index: 1; }
+.cta-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+.cta-note { font-size: 13px; color: rgba(255,255,255,.5); margin-top: 20px; position: relative; z-index: 1; }
+
+/* ══════════════════════════════════════
+   FOOTER
+══════════════════════════════════════ */
+footer {
+  background: var(--gray-800);
+  color: rgba(255,255,255,.7);
+  padding: 70px 0 30px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 50px;
+}
+
+.footer-brand {}
+.footer-brand .nav-logo { color: #fff; margin-bottom: 14px; }
+.footer-brand p { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,.55); max-width: 280px; }
+
+.footer-contact { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.footer-contact-item { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.footer-contact-item span { font-size: 16px; }
+
+.footer-col h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 18px; }
+.footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+.footer-col ul li a { font-size: 14px; color: rgba(255,255,255,.55); transition: color var(--transition); }
+.footer-col ul li a:hover { color: #fff; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 28px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 13px; }
+.footer-bottom .badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.footer-bottom .fb-badge {
+  background: rgba(255,255,255,.08);
+  color: rgba(255,255,255,.6);
+  font-size: 11px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 42px; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); }
+  .steps::before { display: none; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .hero h1 { font-size: 36px; }
+  .problem-grid, .gst-inner, .multistore-inner { grid-template-columns: 1fr; }
+  .features-grid, .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
+  .gst-cards { grid-template-columns: 1fr; }
+  .section-title { font-size: 28px; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* ══════════════════════════════════════
+   SCROLL ANIMATIONS (lightweight JS)
+══════════════════════════════════════ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
 </style>
 </head>
 <body>
 
-<nav id="mainNav">
-  <a href="index.html" class="logo">
-    <img src="images/atishvara-logo.png" alt="Atishvara Learning">
-    <div class="logo-text">Atishvara Learning<span>Inner Intelligence. Higher Consciousness.</span></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#subjects">Topics</a></li>
-    <li><a href="#curriculum">Curriculum</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact" class="nav-cta">Book Trial</a></li>
-  </ul>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+<!-- ══════════════════════════════════════ NAVBAR ══ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">R</div>
+        RetailCore POS
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gst">GST Compliance</a></li>
+        <li><a href="#multistore">Multi-Store</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline" style="padding:10px 22px; font-size:14px;">Talk to Us</a>
+        <a href="#pricing" class="btn btn-primary" style="padding:10px 22px; font-size:14px;">Get Started</a>
+      </div>
+    </div>
+  </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="closeMobile()">About</a>
-  <a href="#subjects" onclick="closeMobile()">Topics</a>
-  <a href="#curriculum" onclick="closeMobile()">Curriculum</a>
-  <a href="#pricing" onclick="closeMobile()">Pricing</a>
-  <a href="#contact" onclick="closeMobile()" style="color:var(--gold)">Book Free Trial →</a>
+
+<!-- ══════════════════════════════════════ HERO ══ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-inner">
+
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <div class="dot"></div>
+          Made for Indian Retail — GST Native
+        </div>
+
+        <h1>
+          The <span class="accent">Smartest POS</span><br/>
+          for Indian Retailers
+        </h1>
+
+        <p>
+          Bill faster. Manage stock. File GST. Run multiple stores.<br/>
+          Everything your retail business needs — in one modern software.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#pricing" class="btn btn-white btn-lg">Start Free Trial</a>
+          <a href="#features" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">
+            Explore Features
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num">18+</div>
+            <div class="lbl">Business Modules</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">100%</div>
+            <div class="lbl">GST Compliant</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">₹999</div>
+            <div class="lbl">Starting / Month</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mock POS Screen -->
+      <div class="hero-visual">
+        <div class="mock-window">
+          <div class="mock-titlebar">
+            <div class="mock-dot mock-dot-r"></div>
+            <div class="mock-dot mock-dot-y"></div>
+            <div class="mock-dot mock-dot-g"></div>
+            <span class="mock-titlebar-text">RetailCore POS — Billing</span>
+          </div>
+          <div class="mock-body">
+            <div class="mock-topbar">
+              <div class="mock-topbar-title">📦 New Invoice  INV/2026-27/00049</div>
+              <div class="mock-topbar-right">
+                <div class="mock-chip">Sharma Electronics</div>
+                <div class="mock-chip">Walk-in</div>
+              </div>
+            </div>
+
+            <div class="mock-grid">
+              <div class="mock-card">
+                <div class="mock-card-label">Today's Sales</div>
+                <div class="mock-card-value">₹28,450</div>
+                <div class="mock-card-sub">23 invoices</div>
+              </div>
+              <div class="mock-card">
+                <div class="mock-card-label">Stock Alerts</div>
+                <div class="mock-card-value" style="color:#FFC107;">3 items</div>
+                <div class="mock-card-sub">Below minimum</div>
+              </div>
+            </div>
+
+            <div class="mock-items">
+              <div class="mock-item">
+                <div class="mock-item-left">
+                  <div class="mock-item-name">Samsung 65" 4K TV</div>
+                  <div class="mock-item-qty">Qty: 1 × ₹55,000</div>
+                </div>
+                <div class="mock-item-price">₹55,000</div>
+              </div>
+              <div class="mock-item">
+                <div class="mock-item-left">
+                  <div class="mock-item-name">HDMI Cable 2m</div>
+                  <div class="mock-item-qty">Qty: 2 × ₹450</div>
+                </div>
+                <div class="mock-item-price">₹900</div>
+              </div>
+              <div class="mock-item">
+                <div class="mock-item-left">
+                  <div class="mock-item-name">Wall Mount Kit</div>
+                  <div class="mock-item-qty">Qty: 1 × ₹1,200</div>
+                </div>
+                <div class="mock-item-price">₹1,200</div>
+              </div>
+            </div>
+
+            <div class="mock-gst-row"><span>Taxable Amount</span><span class="val">₹48,390</span></div>
+            <div class="mock-gst-row"><span>CGST (9%)</span><span class="val">₹4,355</span></div>
+            <div class="mock-gst-row"><span>SGST (9%)</span><span class="val">₹4,355</span></div>
+
+            <div class="mock-total">
+              <div class="mock-total-label">Total Amount</div>
+              <div class="mock-total-value">₹57,100</div>
+            </div>
+
+            <div class="mock-footer">
+              <div class="mock-pay-btn cash">💵 Cash</div>
+              <div class="mock-pay-btn card">💳 Card</div>
+              <div class="mock-pay-btn upi">📱 UPI</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="floating-badge fb1">
+          <div class="fb-icon">🧾</div>
+          <div>
+            <div class="fb-title">GST Invoice Generated</div>
+            <div class="fb-sub">CGST + SGST auto-calculated</div>
+          </div>
+        </div>
+
+        <div class="floating-badge fb2">
+          <div class="fb-icon">📊</div>
+          <div>
+            <div class="fb-title">Stock Deducted</div>
+            <div class="fb-sub">Inventory updated instantly</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ TRUSTED BY ══ -->
+<div class="trusted">
+  <div class="container">
+    <div class="trusted-inner">
+      <span class="trusted-label">Built for all retail categories</span>
+      <div class="trusted-badges">
+        <div class="trusted-item"><span>🛒</span> Grocery & Kirana</div>
+        <div class="trusted-item"><span>👗</span> Fashion & Apparel</div>
+        <div class="trusted-item"><span>💊</span> Pharmacy</div>
+        <div class="trusted-item"><span>📱</span> Electronics</div>
+        <div class="trusted-item"><span>🏠</span> Home & Furniture</div>
+        <div class="trusted-item"><span>⚙️</span> Hardware Store</div>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-bg"></div>
-  <div class="formula-watermark">E=mc²</div>
-  <div class="hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      ⚛ Physics · CBSE Class 11 &amp; 12 · Online · India
-    </div>
-    <h1>Physics Made<br><em>Crystal Clear.</em></h1>
-    <p class="hero-sub">10+ years of classroom mastery, now available online for students across India. From Mechanics to Modern Physics — build intuition, not just formulas.</p>
-    <div class="hero-stats-bar">
-      <div class="stat-item">
-        <div class="stat-num">10<sup>+</sup></div>
-        <div class="stat-label">Years Teaching</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">500<sup>+</sup></div>
-        <div class="stat-label">Students Guided</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num">100%</div>
-        <div class="stat-label">CBSE Aligned</div>
-      </div>
-    </div>
-    <div class="hero-cta">
-      <a href="#contact" class="btn-primary">Book Free Trial</a>
-      <a href="#curriculum" class="btn-secondary">See Curriculum</a>
-    </div>
-  </div>
-</section>
 
-<!-- ABOUT -->
-<section class="about" id="about">
+<!-- ══════════════════════════════════════ PROBLEM / SOLUTION ══ -->
+<section class="problem" id="about">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">About the Tutor</span>
-      <div class="section-title">More Than Equations —<br><em>Real Understanding.</em></div>
-      <div class="gold-line"></div>
-    </div>
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <p>With over a decade of experience teaching CBSE Physics for Classes 11 and 12, I have helped hundreds of students transform their relationship with physics — from fear and confusion to confidence and clarity.</p>
-        <p>My teaching philosophy centers on building <strong>conceptual intuition first</strong>, then applying it to problems. Students don't just memorize — they understand <em>why</em> things work the way they do.</p>
-        <p>Now fully online, I work with students across India — from metros to tier-2 cities — all from the comfort of their homes.</p>
-        <div class="highlight-box">"Physics is not about formulas. It's about seeing the world differently."</div>
+    <div class="section-label">Why RetailCore</div>
+    <div class="section-title">Indian Retailers Deserve Better Software</div>
+
+    <div class="problem-grid reveal">
+      <div>
+        <h3 style="font-size:20px; font-weight:700; color:var(--danger); margin-bottom:4px;">The Old Way — Painful</h3>
+        <p style="font-size:14px; color:var(--gray-600); margin-bottom:20px;">Legacy POS software creates daily frustrations for store owners and cashiers.</p>
+
+        <div class="pain-list">
+          <div class="pain-item">
+            <div class="pain-icon">📋</div>
+            <div class="pain-text">
+              <h4>Manual GST Calculation</h4>
+              <p>Calculating CGST, SGST, and IGST manually for every bill — error-prone and time consuming. Wrong GST = penalties.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="pain-icon">💸</div>
+            <div class="pain-text">
+              <h4>Expensive Licence Fees</h4>
+              <p>₹15,000–₹50,000 one-time licence plus annual renewals. Small retailers simply cannot afford legacy POS software.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="pain-icon">📡</div>
+            <div class="pain-text">
+              <h4>No Real-Time Visibility</h4>
+              <p>Cannot see today's sales from home. If the POS computer crashes, all data is gone. No cloud backup.</p>
+            </div>
+          </div>
+          <div class="pain-item">
+            <div class="pain-icon">🏪</div>
+            <div class="pain-text">
+              <h4>Opening a Second Store is a Nightmare</h4>
+              <p>Buy separate licences, manually reconcile data between stores. No integrated multi-store solution at an affordable price.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="about-cards reveal reveal-d1">
-        <div class="about-card">
-          <div class="about-card-icon">🎓</div>
-          <div class="about-card-body">
-            <h4>Expert in CBSE Curriculum</h4>
-            <p>Deep familiarity with NCERT, board exam patterns, and common student misconceptions.</p>
+
+      <div>
+        <div class="solution-card">
+          <h3>✨ The RetailCore Way — Simple</h3>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>GST is automatic.</strong> Scan an item — CGST, SGST, or IGST is calculated instantly based on the product's HSN code and the customer's state. Zero manual entry.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">🇮🇳</div>
-          <div class="about-card-body">
-            <h4>Online Sessions Across India</h4>
-            <p>Flexible scheduling to fit school hours — mornings, evenings, and weekends.</p>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>Pay monthly, cancel anytime.</strong> Starting at just ₹999/month. No large upfront cost. All updates and new features included.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">📊</div>
-          <div class="about-card-body">
-            <h4>Board + JEE/NEET Ready</h4>
-            <p>Lessons cover both CBSE board exam preparation and competitive entrance readiness.</p>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>Works offline.</strong> Power cut? No internet? The POS keeps working. Data syncs to cloud automatically when connection returns.</p>
           </div>
-        </div>
-        <div class="about-card">
-          <div class="about-card-icon">💬</div>
-          <div class="about-card-body">
-            <h4>Doubt-Clearing Every Session</h4>
-            <p>Every class has dedicated time for student questions — no doubt goes unanswered.</p>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>Multi-store from day one.</strong> Manage 1 store or 50 stores under a single login. Inventory, staff, reports — all consolidated.</p>
+          </div>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>GSTR-1 & GSTR-3B export.</strong> One click exports JSON ready to upload on the GST portal. No CA needed for basic filing prep.</p>
+          </div>
+          <div class="solution-point">
+            <div class="tick">✓</div>
+            <p><strong>Beautiful, fast UI.</strong> Cashiers learn it in under an hour. No training manual required.</p>
           </div>
         </div>
       </div>
@@ -844,337 +1226,577 @@
   </div>
 </section>
 
-<!-- SUBJECTS -->
-<section id="subjects">
+
+<!-- ══════════════════════════════════════ FEATURES ══ -->
+<section class="features" id="features">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Physics · More Subjects Coming Soon</span>
-      <div class="section-title">All Major Topics,<br><em>Deeply Covered.</em></div>
-      <div class="gold-line"></div>
+    <div class="section-center">
+      <div class="section-label">All-in-One Platform</div>
+      <div class="section-title">Everything Your Store Needs</div>
+      <p class="section-sub">From billing to inventory to GST reports — RetailCore POS covers every aspect of your retail business in one integrated system.</p>
     </div>
-    <div class="subjects-grid reveal">
-      <div class="subject-card">
-        <div class="subject-icon">⚙️</div>
-        <h3>Mechanics & Motion</h3>
-        <p>From kinematics to rotational dynamics — the foundation of all physics.</p>
-        <div class="subject-topics">
-          <span class="topic-tag">Kinematics</span>
-          <span class="topic-tag">Newton's Laws</span>
-          <span class="topic-tag">Work & Energy</span>
-          <span class="topic-tag">Rotational Motion</span>
-          <span class="topic-tag">Gravitation</span>
+
+    <div class="features-grid">
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🧾</div>
+        <h3>Fast POS Billing</h3>
+        <p>Scan barcodes or search by name. Create a GST invoice in seconds. Support for walk-in and registered customers. Split payment (Cash + Card + UPI).</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Barcode Scanner</span>
+          <span class="feat-tag">Split Payment</span>
+          <span class="feat-tag">Receipt Print</span>
         </div>
       </div>
-      <div class="subject-card">
-        <div class="subject-icon">⚡</div>
-        <h3>Electrostatics & Magnetism</h3>
-        <p>Electric fields, circuits, magnetic forces — mastered with visual clarity.</p>
-        <div class="subject-topics">
-          <span class="topic-tag">Coulomb's Law</span>
-          <span class="topic-tag">Capacitors</span>
-          <span class="topic-tag">Current Electricity</span>
-          <span class="topic-tag">EMI</span>
-          <span class="topic-tag">AC Circuits</span>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">📦</div>
+        <h3>Product & Inventory</h3>
+        <p>Unlimited products with HSN codes, tax categories, and barcodes. Real-time stock tracking — auto-deducted on every sale, auto-added on purchase receipt.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Live Stock Levels</span>
+          <span class="feat-tag">Low Stock Alerts</span>
+          <span class="feat-tag">Stock History</span>
         </div>
       </div>
-      <div class="subject-card">
-        <div class="subject-icon">🔭</div>
-        <h3>Optics & Waves</h3>
-        <p>Light, lenses, and wave phenomena explained with elegant simplicity.</p>
-        <div class="subject-topics">
-          <span class="topic-tag">Ray Optics</span>
-          <span class="topic-tag">Wave Optics</span>
-          <span class="topic-tag">Interference</span>
-          <span class="topic-tag">Diffraction</span>
-          <span class="topic-tag">Polarization</span>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🇮🇳</div>
+        <h3>GST Compliance</h3>
+        <p>CGST, SGST, IGST auto-calculated per transaction. GSTR-1 and GSTR-3B JSON export in one click. Invoice numbering resets every April 1 (Indian FY).</p>
+        <div class="feat-tags">
+          <span class="feat-tag">GSTR-1 Export</span>
+          <span class="feat-tag">GSTR-3B Export</span>
+          <span class="feat-tag">Rate-wise Report</span>
         </div>
       </div>
-      <div class="subject-card">
-        <div class="subject-icon">⚛️</div>
-        <h3>Modern Physics & Thermodynamics</h3>
-        <p>Quantum ideas, atomic models, and heat — where physics gets fascinating.</p>
-        <div class="subject-topics">
-          <span class="topic-tag">Photoelectric Effect</span>
-          <span class="topic-tag">Atomic Models</span>
-          <span class="topic-tag">Nuclear Physics</span>
-          <span class="topic-tag">Thermodynamics</span>
-          <span class="topic-tag">Semiconductors</span>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">👥</div>
+        <h3>Customer Management</h3>
+        <p>Full customer database with GSTIN support for B2B. Search by name or phone. Purchase history per customer. Loyalty program (coming soon).</p>
+        <div class="feat-tags">
+          <span class="feat-tag">B2B GSTIN</span>
+          <span class="feat-tag">Purchase History</span>
+          <span class="feat-tag">Quick Search</span>
         </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">📥</div>
+        <h3>Purchase & Suppliers</h3>
+        <p>Manage all your suppliers and create purchase orders. Receive goods in one click — stock auto-updates. Full purchase history and outstanding tracking.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">PO Workflow</span>
+          <span class="feat-tag">Goods Receipt</span>
+          <span class="feat-tag">Supplier Database</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">📈</div>
+        <h3>Reports & Analytics</h3>
+        <p>Daily sales summary, GST tax report, low stock report, monthly trend analysis — all with date range filters and quick period shortcuts (Today / Week / Month).</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Daily Sales</span>
+          <span class="feat-tag">GST Summary</span>
+          <span class="feat-tag">Monthly Trend</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">💳</div>
+        <h3>Payment Management</h3>
+        <p>Record full or partial payments. Track outstanding credit. Void payments if needed. Cash register open/close with variance tracking for daily reconciliation.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Partial Payments</span>
+          <span class="feat-tag">Cash Register</span>
+          <span class="feat-tag">Daily Reconcile</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">↩️</div>
+        <h3>Sales Returns</h3>
+        <p>Process customer returns against any original invoice. Stock auto-restocked on return. Full audit trail maintained. Return reason is mandatory — no silent reversals.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Invoice Lookup</span>
+          <span class="feat-tag">Auto Restock</span>
+          <span class="feat-tag">Audit Trail</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🖨️</div>
+        <h3>Printing Support</h3>
+        <p>Thermal receipt printing (POS slip) and A4 Tax Invoice printing. Print log tracks every print job. Compatible with major brands of receipt printers.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Thermal Printer</span>
+          <span class="feat-tag">A4 Tax Invoice</span>
+          <span class="feat-tag">Print History</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ GST SPOTLIGHT ══ -->
+<section class="gst-section" id="gst">
+  <div class="container">
+    <div class="gst-inner">
+
+      <div class="gst-content">
+        <div class="section-label">GST Native</div>
+        <div class="section-title">Built for Indian GST from the Ground Up</div>
+        <p class="section-sub">GST is not a plugin or an add-on in RetailCore POS. It is woven into every single transaction automatically.</p>
+
+        <div class="gst-cards">
+          <div class="gst-mini">
+            <h4>CGST + SGST</h4>
+            <p>Applied automatically on all intra-state sales. Tax split equally between Centre and State.</p>
+          </div>
+          <div class="gst-mini">
+            <h4>IGST</h4>
+            <p>Applied automatically for inter-state B2B sales based on customer's GST state code.</p>
+          </div>
+          <div class="gst-mini">
+            <h4>GSTR-1 Export</h4>
+            <p>B2B invoices and B2CS aggregates exported in JSON — directly uploadable to GST portal.</p>
+          </div>
+          <div class="gst-mini">
+            <h4>GSTR-3B Export</h4>
+            <p>Monthly outward supply summary (Table 3.1) ready for your CA or direct filing.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gst-visual reveal">
+        <div class="gst-panel">
+          <h4>🧾 Invoice #INV/2026-27/00049 — GST Breakdown</h4>
+
+          <div class="gst-row"><span class="gst-lbl">Customer</span><span class="gst-val">Patel Electronics, Ahmedabad</span></div>
+          <div class="gst-row"><span class="gst-lbl">Customer GSTIN</span><span class="gst-val blue">24AABCP1234F1Z5</span></div>
+          <div class="gst-row"><span class="gst-lbl">Supply Type</span><span class="gst-val">Intra-State (Gujarat)</span></div>
+          <div class="gst-row"><span class="gst-lbl">HSN Code</span><span class="gst-val">85287200 (TV Sets)</span></div>
+          <div class="gst-row"><span class="gst-lbl">GST Rate</span><span class="gst-val">18%</span></div>
+          <div class="gst-row"><span class="gst-lbl">Taxable Amount</span><span class="gst-val">₹55,000.00</span></div>
+          <div class="gst-row"><span class="gst-lbl">CGST @ 9%</span><span class="gst-val green">₹4,950.00</span></div>
+          <div class="gst-row"><span class="gst-lbl">SGST @ 9%</span><span class="gst-val green">₹4,950.00</span></div>
+          <div class="gst-row"><span class="gst-lbl">IGST</span><span class="gst-val" style="color:rgba(255,255,255,.3);">N/A (Intra-State)</span></div>
+
+          <div class="gst-total-row">
+            <span class="lbl">Invoice Total</span>
+            <span class="val">₹64,900.00</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ HOW IT WORKS ══ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Simple Process</div>
+      <div class="section-title">Set Up in Under 30 Minutes</div>
+      <p class="section-sub">Getting RetailCore POS up and running is fast. No IT team required. No complex installation.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3>Install & Configure</h3>
+        <p>Install the app on your Windows PC. Enter your store name, GSTIN, and address. Takes 5 minutes.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">2</div>
+        <h3>Add Your Products</h3>
+        <p>Import from Excel or add products one by one. Set prices, HSN codes, and GST rates. Or scan barcodes directly.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">3</div>
+        <h3>Start Billing</h3>
+        <p>Your cashier scans items, selects payment mode, and prints the receipt. GST invoice is generated automatically.</p>
+      </div>
+      <div class="step reveal">
+        <div class="step-num">4</div>
+        <h3>Manage & Grow</h3>
+        <p>View daily reports, manage stock, track suppliers, process returns. Everything from one screen.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CURRICULUM -->
-<section class="curriculum" id="curriculum">
+
+<!-- ══════════════════════════════════════ MULTI-STORE ══ -->
+<section class="multistore" id="multistore">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Course Structure</span>
-      <div class="section-title">Full CBSE Curriculum,<br><em>Unit by Unit.</em></div>
-      <div class="gold-line"></div>
-    </div>
-    <div class="class-tabs">
-      <button class="tab-btn active" onclick="switchTab('class11', this)">Class 11</button>
-      <button class="tab-btn" onclick="switchTab('class12', this)">Class 12</button>
-    </div>
-    <div id="class11" class="tab-content active reveal">
-      <div class="curriculum-grid">
-        <div class="unit-card"><div class="unit-num">01</div><h4>Physical World & Measurement</h4><ul><li>Units & Dimensions</li><li>Error Analysis</li><li>Significant Figures</li></ul></div>
-        <div class="unit-card"><div class="unit-num">02</div><h4>Kinematics</h4><ul><li>Motion in a Straight Line</li><li>Motion in a Plane</li><li>Projectile Motion</li></ul></div>
-        <div class="unit-card"><div class="unit-num">03</div><h4>Laws of Motion</h4><ul><li>Newton's 3 Laws</li><li>Friction</li><li>Circular Motion</li></ul></div>
-        <div class="unit-card"><div class="unit-num">04</div><h4>Work, Energy & Power</h4><ul><li>Work-Energy Theorem</li><li>Conservation of Energy</li><li>Collisions</li></ul></div>
-        <div class="unit-card"><div class="unit-num">05</div><h4>Rotational Motion</h4><ul><li>Torque & Angular Momentum</li><li>Moment of Inertia</li><li>Rolling Motion</li></ul></div>
-        <div class="unit-card"><div class="unit-num">06</div><h4>Gravitation</h4><ul><li>Universal Law</li><li>Kepler's Laws</li><li>Satellites & Orbits</li></ul></div>
-        <div class="unit-card"><div class="unit-num">07</div><h4>Properties of Matter</h4><ul><li>Elasticity</li><li>Fluid Mechanics</li><li>Surface Tension</li></ul></div>
-        <div class="unit-card"><div class="unit-num">08</div><h4>Thermodynamics</h4><ul><li>Laws of Thermodynamics</li><li>Heat Transfer</li><li>Kinetic Theory</li></ul></div>
+    <div class="multistore-inner">
+
+      <div class="ms-visual reveal">
+        <div class="ms-header">
+          🏢 Patel Retail Group — Company Dashboard
+        </div>
+        <div class="ms-stores">
+          <div class="ms-store">
+            <div>
+              <div class="ms-store-name">Store 1 — Ahmedabad Main</div>
+              <div class="ms-store-loc">Ring Road, Ahmedabad · 3 staff</div>
+            </div>
+            <div class="ms-store-badge">● Live</div>
+          </div>
+          <div class="ms-store">
+            <div>
+              <div class="ms-store-name">Store 2 — Surat Branch</div>
+              <div class="ms-store-loc">Adajan, Surat · 2 staff</div>
+            </div>
+            <div class="ms-store-badge">● Live</div>
+          </div>
+          <div class="ms-store">
+            <div>
+              <div class="ms-store-name">Store 3 — Vadodara Branch</div>
+              <div class="ms-store-loc">Alkapuri, Vadodara · 2 staff</div>
+            </div>
+            <div class="ms-store-badge">● Live</div>
+          </div>
+          <div class="ms-store" style="border-style:dashed; background: var(--gray-100);">
+            <div>
+              <div class="ms-store-name" style="color:var(--gray-600);">+ Add New Store</div>
+              <div class="ms-store-loc">Expand your chain anytime</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div id="class12" class="tab-content reveal">
-      <div class="curriculum-grid">
-        <div class="unit-card"><div class="unit-num">01</div><h4>Electrostatics</h4><ul><li>Electric Field & Potential</li><li>Gauss's Law</li><li>Capacitors</li></ul></div>
-        <div class="unit-card"><div class="unit-num">02</div><h4>Current Electricity</h4><ul><li>Ohm's Law</li><li>Kirchhoff's Laws</li><li>Wheatstone Bridge</li></ul></div>
-        <div class="unit-card"><div class="unit-num">03</div><h4>Magnetic Effects</h4><ul><li>Biot-Savart Law</li><li>Ampere's Law</li><li>Moving Charges</li></ul></div>
-        <div class="unit-card"><div class="unit-num">04</div><h4>EMI & AC Circuits</h4><ul><li>Faraday's Law</li><li>Lenz's Law</li><li>LC & LCR Circuits</li></ul></div>
-        <div class="unit-card"><div class="unit-num">05</div><h4>Optics</h4><ul><li>Ray Optics</li><li>Wave Optics</li><li>Interference & Diffraction</li></ul></div>
-        <div class="unit-card"><div class="unit-num">06</div><h4>Dual Nature of Matter</h4><ul><li>Photoelectric Effect</li><li>de Broglie Wavelength</li><li>Davisson-Germer</li></ul></div>
-        <div class="unit-card"><div class="unit-num">07</div><h4>Atoms & Nuclei</h4><ul><li>Bohr's Model</li><li>Radioactivity</li><li>Nuclear Reactions</li></ul></div>
-        <div class="unit-card"><div class="unit-num">08</div><h4>Semiconductors</h4><ul><li>p-n Junction</li><li>Transistors</li><li>Logic Gates</li></ul></div>
+
+      <div>
+        <div class="section-label">Multi-Store</div>
+        <div class="section-title">One Platform, Any Number of Stores</div>
+        <p class="section-sub">Whether you have 1 shop or 50 branches, RetailCore POS keeps everything connected under a single company account.</p>
+
+        <div class="ms-points">
+          <div class="ms-point reveal">
+            <div class="ms-point-icon">🔐</div>
+            <div>
+              <h4>Complete Data Isolation</h4>
+              <p>Each store's sales, stock, and customers are kept completely separate. Cashiers only see their own store.</p>
+            </div>
+          </div>
+          <div class="ms-point reveal">
+            <div class="ms-point-icon">📦</div>
+            <div>
+              <h4>Inter-Store Stock Transfer</h4>
+              <p>Transfer stock between stores instantly. Both stores' inventory updates automatically — no manual entry.</p>
+            </div>
+          </div>
+          <div class="ms-point reveal">
+            <div class="ms-point-icon">👤</div>
+            <div>
+              <h4>Role-Based Access</h4>
+              <p>Owner, Manager, Cashier, Viewer — each role sees only what they need. Staff cannot access financial data they shouldn't see.</p>
+            </div>
+          </div>
+          <div class="ms-point reveal">
+            <div class="ms-point-icon">📊</div>
+            <div>
+              <h4>Consolidated Company Reports</h4>
+              <p>View total sales, GST, and inventory across all stores in one place. Compare store performance instantly.</p>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 </section>
 
-<!-- PRICING -->
-<section id="pricing">
+
+<!-- ══════════════════════════════════════ PRICING ══ -->
+<section class="pricing" id="pricing">
   <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Session Plans</span>
-      <div class="section-title">Simple, Transparent<br><em>Pricing.</em></div>
-      <div class="gold-line"></div>
+    <div class="section-center">
+      <div class="section-label">Simple Pricing</div>
+      <div class="section-title">Transparent Plans. No Hidden Costs.</div>
+      <p class="section-sub">All plans include all features for the plan tier. No per-user extra charges. Cancel anytime.</p>
+
+      <div class="pricing-toggle">
+        <div class="price-tab active">Monthly</div>
+        <div class="price-tab">Annual (Save 2 months)</div>
+      </div>
     </div>
+
     <div class="pricing-grid reveal">
-      <div class="price-card">
-        <h3>Trial Session</h3>
-        <div class="price-amount">Free</div>
-        <div class="price-period">One-time · 30 minutes</div>
-        <ul class="price-features">
-          <li>1-on-1 live session</li>
-          <li>Topic of your choice</li>
-          <li>Concept explanation</li>
-          <li>Q&A included</li>
-        </ul>
-        <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block;">Book Now</a>
-      </div>
-      <div class="price-card featured">
-        <h3>Regular 1-on-1</h3>
-        <div class="price-amount">₹800</div>
-        <div class="price-period">per hour · live session</div>
-        <ul class="price-features">
-          <li>Personalized lesson plan</li>
-          <li>Doubt-clearing every class</li>
-          <li>Notes & practice sheets</li>
-          <li>WhatsApp support</li>
-          <li>Flexible scheduling</li>
-        </ul>
-        <a href="#contact" class="btn-primary" style="width:100%;text-align:center;display:block;">Get Started</a>
-      </div>
-      <div class="price-card">
-        <h3>Group Batch</h3>
-        <div class="price-amount">₹300</div>
-        <div class="price-period">per student / session · 3–8 students</div>
-        <ul class="price-features">
-          <li>Structured chapter-wise plan</li>
-          <li>Peer learning environment</li>
-          <li>Weekly tests included</li>
-          <li>Recorded sessions</li>
-        </ul>
-        <a href="#contact" class="btn-secondary" style="width:100%;text-align:center;display:block;">Enquire</a>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-label">Get In Touch</span>
-      <div class="section-title">Book Your <em>Free Trial</em></div>
-      <div class="gold-line"></div>
-    </div>
-    <div class="contact-inner reveal">
-      <!-- LEFT: Contact Info -->
-      <div class="contact-info-col">
-        <p>Whether you want to book a free trial, ask about a topic, or understand what's right for your child — reach out on any of these channels. I usually respond within a few hours.</p>
-        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="contact-item">
-          <div class="contact-icon">💬</div>
-          <div class="contact-item-text">
-            <h4>WhatsApp</h4>
-            <span>+91 XXXXX XXXXX</span>
-            <p>Fastest response — usually within 1–2 hours</p>
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-name">Starter</div>
+          <div class="plan-desc">Perfect for a single store getting started</div>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount">999</span>
+            <span class="period">/month</span>
           </div>
-        </a>
-        <a href="mailto:hello@atishvara.com" class="contact-item">
-          <div class="contact-icon">✉️</div>
-          <div class="contact-item-text">
-            <h4>Email</h4>
-            <span>hello@atishvara.com</span>
-            <p>For detailed queries, documents or schedules</p>
+        </div>
+        <div class="plan-body">
+          <div class="plan-features">
+            <div class="plan-feat"><span class="tick">✓</span> 1 Store</div>
+            <div class="plan-feat"><span class="tick">✓</span> 2 Staff Users</div>
+            <div class="plan-feat"><span class="tick">✓</span> GST Billing & Invoicing</div>
+            <div class="plan-feat"><span class="tick">✓</span> Product Catalogue (unlimited)</div>
+            <div class="plan-feat"><span class="tick">✓</span> Basic Inventory Tracking</div>
+            <div class="plan-feat"><span class="tick">✓</span> Daily Sales Report</div>
+            <div class="plan-feat"><span class="tick">✓</span> Thermal Receipt Printing</div>
+            <div class="plan-feat"><span class="tick">✓</span> Email Support</div>
+            <div class="plan-feat"><span class="cross">✗</span> <span style="color:var(--gray-600)">GSTR-1 / GSTR-3B Export</span></div>
+            <div class="plan-feat"><span class="cross">✗</span> <span style="color:var(--gray-600)">Purchase Orders</span></div>
+            <div class="plan-feat"><span class="cross">✗</span> <span style="color:var(--gray-600)">Multi-Store</span></div>
           </div>
-        </a>
-        <a href="#" class="contact-item">
-          <div class="contact-icon">▶️</div>
-          <div class="contact-item-text">
-            <h4>YouTube</h4>
-            <span>Atishvara Learning</span>
-            <p>Free concept videos — subscribe for updates</p>
-          </div>
-        </a>
-        <a href="#" class="contact-item">
-          <div class="contact-icon">💼</div>
-          <div class="contact-item-text">
-            <h4>LinkedIn</h4>
-            <span>Atishvara Learning</span>
-            <p>Connect professionally</p>
-          </div>
-        </a>
-        <div class="availability">
-          <h4>Session Availability</h4>
-          <div class="avail-row"><span>Monday – Friday</span><span>6:00 AM – 9:00 PM IST</span></div>
-          <div class="avail-row"><span>Saturday</span><span>8:00 AM – 6:00 PM IST</span></div>
-          <div class="avail-row"><span>Sunday</span><span>By request only</span></div>
-          <div class="avail-row"><span>All sessions in</span><span>IST (India Standard Time)</span></div>
+          <a href="#contact" class="btn btn-outline plan-btn" style="width:100%; justify-content:center;">Get Started</a>
         </div>
       </div>
 
-      <!-- RIGHT: Form -->
-      <div class="contact-form-col">
-        <h2>Send an <em>Enquiry</em></h2>
-        <p>Fill in the details below and I'll get back to you within 24 hours to confirm your slot or answer your questions.</p>
-        <form class="contact-form" onsubmit="handleSubmit(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="student-name">Student Name</label>
-              <input id="student-name" type="text" placeholder="Full name" required>
-            </div>
-            <div class="form-group">
-              <label for="parent-name">Parent / Guardian Name</label>
-              <input id="parent-name" type="text" placeholder="Full name">
-            </div>
+      <div class="plan-card popular">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-header">
+          <div class="plan-name">Professional</div>
+          <div class="plan-desc">Full feature set for growing retailers</div>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount">1,999</span>
+            <span class="period">/month</span>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input id="email" type="email" placeholder="your@email.com" required>
-            </div>
-            <div class="form-group">
-              <label for="whatsapp">WhatsApp Number</label>
-              <input id="whatsapp" type="tel" placeholder="+91 XXXXX XXXXX">
-            </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-features">
+            <div class="plan-feat"><span class="tick">✓</span> 1 Store</div>
+            <div class="plan-feat"><span class="tick">✓</span> 10 Staff Users</div>
+            <div class="plan-feat"><span class="tick">✓</span> Everything in Starter</div>
+            <div class="plan-feat"><span class="tick">✓</span> GSTR-1 & GSTR-3B JSON Export</div>
+            <div class="plan-feat"><span class="tick">✓</span> Purchase Orders & Suppliers</div>
+            <div class="plan-feat"><span class="tick">✓</span> Sales Returns</div>
+            <div class="plan-feat"><span class="tick">✓</span> Customer Management</div>
+            <div class="plan-feat"><span class="tick">✓</span> A4 Tax Invoice Printing</div>
+            <div class="plan-feat"><span class="tick">✓</span> Cash Register Management</div>
+            <div class="plan-feat"><span class="tick">✓</span> Priority Support</div>
+            <div class="plan-feat"><span class="cross">✗</span> <span style="color:var(--gray-600)">Multi-Store Dashboard</span></div>
           </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="class-select">Class</label>
-              <select id="class-select" required>
-                <option value="" disabled selected>Select class</option>
-                <option>Class 11</option>
-                <option>Class 12</option>
-                <option>Both 11 & 12</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="session-type">Session Type</label>
-              <select id="session-type">
-                <option value="" disabled selected>Select type</option>
-                <option>Free Trial (30 min)</option>
-                <option>Regular 1-on-1 (₹800/hr)</option>
-                <option>Group Batch (₹300/session)</option>
-              </select>
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="time-slot">Preferred Time Slot</label>
-            <select id="time-slot">
-              <option value="" disabled selected>Select a preferred slot</option>
-              <option>Morning (6 AM – 9 AM IST)</option>
-              <option>Late Morning (9 AM – 12 PM IST)</option>
-              <option>Afternoon (12 PM – 4 PM IST)</option>
-              <option>Evening (4 PM – 7 PM IST)</option>
-              <option>Night (7 PM – 9 PM IST)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="goals">Topics / Goals (optional)</label>
-            <textarea id="goals" placeholder="Which topics are you struggling with? Any upcoming exams? Anything else I should know..."></textarea>
-          </div>
-          <div class="success-msg" id="successMsg">
-            ✓ Your enquiry has been sent! I'll get back to you within 24 hours on WhatsApp or email.
-          </div>
-          <button type="submit" class="btn-primary">Send Enquiry →</button>
-        </form>
+          <a href="#contact" class="btn btn-primary plan-btn" style="width:100%; justify-content:center;">Get Started</a>
+        </div>
       </div>
+
+      <div class="plan-card">
+        <div class="plan-header">
+          <div class="plan-name">Chain / Enterprise</div>
+          <div class="plan-desc">For retail chains and growing businesses</div>
+          <div class="plan-price">
+            <span class="currency">₹</span>
+            <span class="amount">4,999</span>
+            <span class="period">/month</span>
+          </div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-features">
+            <div class="plan-feat"><span class="tick">✓</span> Up to 10 Stores</div>
+            <div class="plan-feat"><span class="tick">✓</span> Unlimited Users</div>
+            <div class="plan-feat"><span class="tick">✓</span> Everything in Professional</div>
+            <div class="plan-feat"><span class="tick">✓</span> Multi-Store Dashboard</div>
+            <div class="plan-feat"><span class="tick">✓</span> Consolidated GST Reports</div>
+            <div class="plan-feat"><span class="tick">✓</span> Inter-Store Stock Transfer</div>
+            <div class="plan-feat"><span class="tick">✓</span> Company-Wide Analytics</div>
+            <div class="plan-feat"><span class="tick">✓</span> Dedicated Account Manager</div>
+            <div class="plan-feat"><span class="tick">✓</span> Custom Invoice Branding</div>
+            <div class="plan-feat"><span class="tick">✓</span> SLA-backed Support</div>
+            <div class="plan-feat"><span class="tick">✓</span> Data Migration Assistance</div>
+          </div>
+          <a href="#contact" class="btn btn-outline plan-btn" style="width:100%; justify-content:center;">Contact Sales</a>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="text-align:center; margin-top:28px; font-size:14px; color:var(--gray-600);">
+      All plans include free updates, GST engine upgrades, and 30-day money-back guarantee. &nbsp;|&nbsp; More than 10 stores? <a href="#contact" style="color:var(--primary); font-weight:600;">Contact us for custom pricing.</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ TESTIMONIALS ══ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Customer Stories</div>
+      <div class="section-title">Trusted by Retailers Across India</div>
+      <p class="section-sub">Real feedback from store owners who switched to RetailCore POS.</p>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">The GST feature alone saved us hours every month. Earlier we had to manually calculate CGST and SGST for every bill. Now it just happens automatically. Our CA is also very happy with the GSTR-1 export.</div>
+        <div class="testi-author">
+          <div class="testi-avatar av-blue">R</div>
+          <div>
+            <div class="testi-name">Rajesh Sharma</div>
+            <div class="testi-role">Owner, Sharma Electronics · Jaipur</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">We had 3 garment stores on 3 different POS softwares. After RetailCore, everything is in one place. I can see how each store is performing from my phone. The stock transfer between stores is a game changer.</div>
+        <div class="testi-author">
+          <div class="testi-avatar av-green">P</div>
+          <div>
+            <div class="testi-name">Priya Mehta</div>
+            <div class="testi-role">Director, Mehta Fashion House · Surat</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card reveal">
+        <div class="testi-quote">"</div>
+        <div class="testi-stars">★★★★★</div>
+        <div class="testi-text">Software is very fast and easy to use. My cashier learned it in one day. The barcode scanner works perfectly. Earlier our billing used to take 2–3 minutes per customer. Now it is under 30 seconds. Queue is much shorter.</div>
+        <div class="testi-author">
+          <div class="testi-avatar av-orange">V</div>
+          <div>
+            <div class="testi-name">Vijay Patel</div>
+            <div class="testi-role">Owner, Patel Kirana Mart · Ahmedabad</div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
+
+<!-- ══════════════════════════════════════ CTA ══ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Modernise Your Store?</h2>
+    <p>Join hundreds of Indian retailers already using RetailCore POS.<br/>Start your free trial today — no credit card required.</p>
+    <div class="cta-actions">
+      <a href="mailto:info@retailcore.in" class="btn btn-white btn-lg">📧 Email Us</a>
+      <a href="tel:+91" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">📞 Call for Demo</a>
+    </div>
+    <p class="cta-note">Free 30-day trial &nbsp;·&nbsp; No credit card needed &nbsp;·&nbsp; Setup support included</p>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ FOOTER ══ -->
 <footer>
-  <p>© 2025 Atishvara Learning · CBSE Physics Class 11 & 12 · More Subjects Coming Soon</p>
-  <div class="footer-links">
-    <a href="https://wa.me/91XXXXXXXXXX" target="_blank">WhatsApp</a>
-    <a href="#">YouTube</a>
-    <a href="#">LinkedIn</a>
-    <a href="mailto:hello@atishvara.com">Email</a>
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <div class="logo-icon">R</div>
+          RetailCore POS
+        </div>
+        <p>India's modern POS platform — built from the ground up for GST compliance, multi-store retail, and the Indian market.</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><span>📧</span> info@retailcore.in</div>
+          <div class="footer-contact-item"><span>🇮🇳</span> Made in India</div>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gst">GST Compliance</a></li>
+          <li><a href="#multistore">Multi-Store</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#how">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Retail Segments</h4>
+        <ul>
+          <li><a href="#">Grocery & Kirana</a></li>
+          <li><a href="#">Fashion & Apparel</a></li>
+          <li><a href="#">Pharmacy</a></li>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Hardware Store</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Partner Program</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 RetailCore Technologies Pvt. Ltd. All rights reserved.</p>
+      <div class="badges">
+        <span class="fb-badge">🇮🇳 GST Native</span>
+        <span class="fb-badge">🔐 Secure</span>
+        <span class="fb-badge">☁️ Cloud-Ready</span>
+        <span class="fb-badge">📴 Works Offline</span>
+      </div>
+    </div>
   </div>
 </footer>
 
-<button id="back-top" aria-label="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
+<!-- ══════════════════════════════════════ JS ══ -->
 <script>
-  // Nav scroll state
-  const nav = document.getElementById('mainNav');
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-    document.getElementById('back-top').classList.toggle('visible', window.scrollY > 400);
+    navbar.classList.toggle('scrolled', window.scrollY > 30);
   });
 
-  // Hamburger
-  const ham = document.getElementById('hamburger');
-  const mob = document.getElementById('mobileMenu');
-  ham.addEventListener('click', () => {
-    ham.classList.toggle('open');
-    mob.classList.toggle('open');
-    document.body.style.overflow = mob.classList.contains('open') ? 'hidden' : '';
-  });
-  function closeMobile() {
-    ham.classList.remove('open');
-    mob.classList.remove('open');
-    document.body.style.overflow = '';
-  }
-
-  // Tab switching
-  function switchTab(id, btn) {
-    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById(id).classList.add('active');
-    btn.classList.add('active');
-  }
-
-  // Scroll reveal with stagger
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-  }, { threshold: 0.1 });
+  // Reveal on scroll
+  const observer = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.12 }
+  );
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-  // Form submit
-  function handleSubmit(e) {
-    e.preventDefault();
-    const msg = document.getElementById('successMsg');
-    msg.style.display = 'block';
-    const btn = e.target.querySelector('button[type="submit"]');
-    btn.textContent = '✓ Sent!';
-    btn.style.background = '#2a9d5c';
-    msg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  }
+  // Pricing toggle
+  document.querySelectorAll('.price-tab').forEach((tab, i) => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.price-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const amounts = document.querySelectorAll('.plan-price .amount');
+      const monthly = ['999', '1,999', '4,999'];
+      const annual  = ['833', '1,665', '4,165'];
+      amounts.forEach((el, j) => { el.textContent = i === 0 ? monthly[j] : annual[j]; });
+    });
+  });
+
+  // Smooth anchor scroll (offset for fixed navbar)
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.offsetTop - 76, behavior: 'smooth' });
+      }
+    });
+  });
 </script>
+
 </body>
 </html>
