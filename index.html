@@ -3,7 +3,18 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>RetailCore POS — Modern POS Software for Indian Retail</title>
+<title>Atishvara — Product & Software Engineering Company | Makers of RetailCore POS</title>
+<meta name="description" content="Atishvara is a product-and-services IT company building custom software, cloud solutions, and ready-made products for Indian businesses — including RetailCore POS, our GST-native point-of-sale platform."/>
+<link rel="canonical" href="https://atishvara.com/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Atishvara — Product & Software Engineering Company"/>
+<meta property="og:description" content="Custom software, cloud & DevOps, and IT consulting — plus RetailCore POS, our flagship GST-native retail product."/>
+<meta property="og:url" content="https://atishvara.com/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Atishvara — Product & Software Engineering Company"/>
+<meta name="twitter:description" content="Custom software, cloud & DevOps, and IT consulting — plus RetailCore POS, our flagship GST-native retail product."/>
+<meta name="theme-color" content="#1565C0"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231565C0'/%3E%3Ctext x='32' y='44' font-family='Segoe UI, Arial, sans-serif' font-size='34' font-weight='900' fill='%23fff' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"/>
 <style>
 
 /* ══════════════════════════════════════
@@ -182,6 +193,20 @@ section { padding: 90px 0; }
 .nav-links a:hover { color: var(--primary); }
 
 .nav-actions { display: flex; align-items: center; gap: 12px; }
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav-toggle span { width: 24px; height: 2px; background: var(--secondary); border-radius: 2px; transition: transform var(--transition), opacity var(--transition); }
+.nav-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ══════════════════════════════════════
    HERO
@@ -516,6 +541,13 @@ section { padding: 90px 0; }
   margin-top: 56px;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 56px;
+}
+
 .feat-card {
   background: var(--gray-100);
   border-radius: var(--radius);
@@ -554,6 +586,83 @@ section { padding: 90px 0; }
 }
 
 /* ══════════════════════════════════════
+   PRODUCTS
+══════════════════════════════════════ */
+.products { background: var(--gray-100); }
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 56px;
+  align-items: stretch;
+}
+
+.product-spotlight {
+  background: linear-gradient(135deg, var(--primary), #0288D1);
+  border-radius: var(--radius);
+  padding: 40px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.product-spotlight::before {
+  content: '';
+  position: absolute;
+  top: -30%; right: -20%;
+  width: 60%; height: 60%;
+  background: radial-gradient(circle, rgba(255,255,255,.12), transparent 70%);
+  border-radius: 50%;
+}
+.product-spotlight .badge { background: rgba(255,255,255,.18); color: #fff; margin-bottom: 16px; }
+.product-spotlight h3 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+.product-spotlight p { font-size: 14px; color: rgba(255,255,255,.85); max-width: 480px; margin-bottom: 22px; }
+.product-highlights { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+.product-highlight {
+  background: rgba(255,255,255,.14);
+  border: 1px solid rgba(255,255,255,.22);
+  border-radius: 20px;
+  padding: 6px 16px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.product-placeholder {
+  border: 2px dashed var(--gray-300);
+  border-radius: var(--radius);
+  padding: 40px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--gray-600);
+}
+.product-placeholder .fb-icon { font-size: 32px; margin-bottom: 14px; }
+.product-placeholder h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.product-placeholder p { font-size: 13px; }
+
+/* ══════════════════════════════════════
+   ABOUT / WHY ATISHVARA
+══════════════════════════════════════ */
+.about-us { background: var(--white); }
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  text-align: center;
+}
+.about-stat {
+  background: var(--gray-100);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  padding: 28px 18px;
+}
+.about-stat .num { font-size: 32px; font-weight: 900; color: var(--primary); }
+.about-stat .lbl { font-size: 13px; color: var(--gray-600); margin-top: 6px; }
+
+/* ══════════════════════════════════════
    GST SPOTLIGHT
 ══════════════════════════════════════ */
 .gst-section {
@@ -579,7 +688,7 @@ section { padding: 90px 0; }
   border-radius: 12px;
   padding: 18px;
 }
-.gst-mini h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+.gst-mini h3 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; }
 .gst-mini p { font-size: 12px; color: rgba(255,255,255,.7); line-height: 1.6; }
 
 .gst-visual { position: relative; }
@@ -590,7 +699,7 @@ section { padding: 90px 0; }
   padding: 28px;
   backdrop-filter: blur(10px);
 }
-.gst-panel h4 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 12px; }
+.gst-panel h3 { color: #fff; font-size: 15px; font-weight: 700; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,.15); padding-bottom: 12px; }
 .gst-row {
   display: flex;
   justify-content: space-between;
@@ -721,7 +830,7 @@ section { padding: 90px 0; }
   font-size: 20px;
   flex-shrink: 0;
 }
-.ms-point h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.ms-point h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .ms-point p { font-size: 14px; color: var(--gray-600); }
 
 /* ══════════════════════════════════════
@@ -936,19 +1045,40 @@ footer {
 ══════════════════════════════════════ */
 @media (max-width: 1024px) {
   .hero h1 { font-size: 42px; }
-  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .features-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: 1fr; }
+  .about-stats { grid-template-columns: repeat(2, 1fr); }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .steps::before { display: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-talk-btn { display: none; }
+  .nav-links {
+    position: absolute;
+    top: 68px;
+    left: 0; right: 0;
+    background: var(--white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 8px 24px;
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+  .nav-links.open { max-height: 320px; padding: 12px 24px; }
+  .nav-links li { width: 100%; padding: 12px 0; border-bottom: 1px solid var(--gray-200); }
+  .nav-links li:last-child { border-bottom: none; }
   .hero-inner { grid-template-columns: 1fr; }
   .hero-visual { display: none; }
   .hero h1 { font-size: 36px; }
   .problem-grid, .gst-inner, .multistore-inner { grid-template-columns: 1fr; }
-  .features-grid, .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
+  .features-grid, .services-grid, .pricing-grid, .testi-grid { grid-template-columns: 1fr; }
+  .products-grid, .about-stats { grid-template-columns: 1fr; }
   .gst-cards { grid-template-columns: 1fr; }
   .section-title { font-size: 28px; }
   .footer-grid { grid-template-columns: 1fr; }
@@ -972,22 +1102,24 @@ footer {
 <nav class="navbar" id="navbar">
   <div class="container">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
-        <div class="logo-icon">R</div>
-        RetailCore POS
+      <a href="#home" class="nav-logo">
+        <div class="logo-icon">A</div>
+        Atishvara
       </a>
 
-      <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#gst">GST Compliance</a></li>
-        <li><a href="#multistore">Multi-Store</a></li>
-        <li><a href="#pricing">Pricing</a></li>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#contact" class="btn btn-outline" style="padding:10px 22px; font-size:14px;">Talk to Us</a>
-        <a href="#pricing" class="btn btn-primary" style="padding:10px 22px; font-size:14px;">Get Started</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <a href="#contact" class="btn btn-outline nav-talk-btn" style="padding:10px 22px; font-size:14px;">Talk to Us</a>
+        <a href="#products" class="btn btn-primary" style="padding:10px 22px; font-size:14px;">Get Started</a>
       </div>
     </div>
   </div>
@@ -1002,38 +1134,39 @@ footer {
       <div class="hero-content">
         <div class="hero-eyebrow">
           <div class="dot"></div>
-          Made for Indian Retail — GST Native
+          Product & Services IT Company — Made in India
         </div>
 
         <h1>
-          The <span class="accent">Smartest POS</span><br/>
-          for Indian Retailers
+          We Build <span class="accent">Software</span><br/>
+          That Moves Business Forward
         </h1>
 
         <p>
-          Bill faster. Manage stock. File GST. Run multiple stores.<br/>
-          Everything your retail business needs — in one modern software.
+          From custom engineering to cloud, consulting, and ready-made products —
+          Atishvara helps Indian businesses go digital, stay compliant, and scale with confidence.
         </p>
 
         <div class="hero-cta">
-          <a href="#pricing" class="btn btn-white btn-lg">Start Free Trial</a>
-          <a href="#features" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">
-            Explore Features
+          <a href="#products" class="btn btn-white btn-lg">Explore Our Products</a>
+          <a href="#services" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">
+            Our Services
           </a>
         </div>
 
+        <!-- TODO: replace with real, up-to-date company figures -->
         <div class="hero-stats">
           <div class="hero-stat">
-            <div class="num">18+</div>
-            <div class="lbl">Business Modules</div>
+            <div class="num">4+</div>
+            <div class="lbl">Core Services</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num">1</div>
+            <div class="lbl">Flagship Product</div>
           </div>
           <div class="hero-stat">
             <div class="num">100%</div>
-            <div class="lbl">GST Compliant</div>
-          </div>
-          <div class="hero-stat">
-            <div class="num">₹999</div>
-            <div class="lbl">Starting / Month</div>
+            <div class="lbl">Client-Focused Delivery</div>
           </div>
         </div>
       </div>
@@ -1045,84 +1178,80 @@ footer {
             <div class="mock-dot mock-dot-r"></div>
             <div class="mock-dot mock-dot-y"></div>
             <div class="mock-dot mock-dot-g"></div>
-            <span class="mock-titlebar-text">RetailCore POS — Billing</span>
+            <span class="mock-titlebar-text">Atishvara — Company Overview</span>
           </div>
           <div class="mock-body">
             <div class="mock-topbar">
-              <div class="mock-topbar-title">📦 New Invoice  INV/2026-27/00049</div>
+              <div class="mock-topbar-title">🏢 Atishvara Technologies</div>
               <div class="mock-topbar-right">
-                <div class="mock-chip">Sharma Electronics</div>
-                <div class="mock-chip">Walk-in</div>
+                <div class="mock-chip">Products</div>
+                <div class="mock-chip">Services</div>
               </div>
             </div>
 
             <div class="mock-grid">
               <div class="mock-card">
-                <div class="mock-card-label">Today's Sales</div>
-                <div class="mock-card-value">₹28,450</div>
-                <div class="mock-card-sub">23 invoices</div>
+                <div class="mock-card-label">Products Built</div>
+                <div class="mock-card-value">1</div>
+                <div class="mock-card-sub">RetailCore POS</div>
               </div>
               <div class="mock-card">
-                <div class="mock-card-label">Stock Alerts</div>
-                <div class="mock-card-value" style="color:#FFC107;">3 items</div>
-                <div class="mock-card-sub">Below minimum</div>
+                <div class="mock-card-label">Core Services</div>
+                <div class="mock-card-value">4</div>
+                <div class="mock-card-sub">Engineering to consulting</div>
               </div>
             </div>
 
             <div class="mock-items">
               <div class="mock-item">
                 <div class="mock-item-left">
-                  <div class="mock-item-name">Samsung 65" 4K TV</div>
-                  <div class="mock-item-qty">Qty: 1 × ₹55,000</div>
+                  <div class="mock-item-name">Product Engineering</div>
+                  <div class="mock-item-qty">In-house products & platforms</div>
                 </div>
-                <div class="mock-item-price">₹55,000</div>
+                <div class="mock-item-price">✓</div>
               </div>
               <div class="mock-item">
                 <div class="mock-item-left">
-                  <div class="mock-item-name">HDMI Cable 2m</div>
-                  <div class="mock-item-qty">Qty: 2 × ₹450</div>
+                  <div class="mock-item-name">Custom Software Development</div>
+                  <div class="mock-item-qty">Web, mobile & desktop apps</div>
                 </div>
-                <div class="mock-item-price">₹900</div>
+                <div class="mock-item-price">✓</div>
               </div>
               <div class="mock-item">
                 <div class="mock-item-left">
-                  <div class="mock-item-name">Wall Mount Kit</div>
-                  <div class="mock-item-qty">Qty: 1 × ₹1,200</div>
+                  <div class="mock-item-name">Cloud & DevOps</div>
+                  <div class="mock-item-qty">Infra, deployment, hosting</div>
                 </div>
-                <div class="mock-item-price">₹1,200</div>
+                <div class="mock-item-price">✓</div>
               </div>
             </div>
 
-            <div class="mock-gst-row"><span>Taxable Amount</span><span class="val">₹48,390</span></div>
-            <div class="mock-gst-row"><span>CGST (9%)</span><span class="val">₹4,355</span></div>
-            <div class="mock-gst-row"><span>SGST (9%)</span><span class="val">₹4,355</span></div>
-
             <div class="mock-total">
-              <div class="mock-total-label">Total Amount</div>
-              <div class="mock-total-value">₹57,100</div>
+              <div class="mock-total-label">Flagship Product</div>
+              <div class="mock-total-value">RetailCore POS</div>
             </div>
 
             <div class="mock-footer">
-              <div class="mock-pay-btn cash">💵 Cash</div>
-              <div class="mock-pay-btn card">💳 Card</div>
-              <div class="mock-pay-btn upi">📱 UPI</div>
+              <div class="mock-pay-btn cash">🧭 Consulting</div>
+              <div class="mock-pay-btn card">🛠️ Engineering</div>
+              <div class="mock-pay-btn upi">☁️ Cloud</div>
             </div>
           </div>
         </div>
 
         <div class="floating-badge fb1">
-          <div class="fb-icon">🧾</div>
+          <div class="fb-icon">🚀</div>
           <div>
-            <div class="fb-title">GST Invoice Generated</div>
-            <div class="fb-sub">CGST + SGST auto-calculated</div>
+            <div class="fb-title">Product Engineering</div>
+            <div class="fb-sub">Built in-house, RetailCore POS live</div>
           </div>
         </div>
 
         <div class="floating-badge fb2">
-          <div class="fb-icon">📊</div>
+          <div class="fb-icon">🤝</div>
           <div>
-            <div class="fb-title">Stock Deducted</div>
-            <div class="fb-sub">Inventory updated instantly</div>
+            <div class="fb-title">Client-First Delivery</div>
+            <div class="fb-sub">Dedicated support, start to finish</div>
           </div>
         </div>
       </div>
@@ -1136,25 +1265,115 @@ footer {
 <div class="trusted">
   <div class="container">
     <div class="trusted-inner">
-      <span class="trusted-label">Built for all retail categories</span>
+      <span class="trusted-label">What We Do</span>
       <div class="trusted-badges">
-        <div class="trusted-item"><span>🛒</span> Grocery & Kirana</div>
-        <div class="trusted-item"><span>👗</span> Fashion & Apparel</div>
-        <div class="trusted-item"><span>💊</span> Pharmacy</div>
-        <div class="trusted-item"><span>📱</span> Electronics</div>
-        <div class="trusted-item"><span>🏠</span> Home & Furniture</div>
-        <div class="trusted-item"><span>⚙️</span> Hardware Store</div>
+        <a href="#services" class="trusted-item"><span>🧩</span> Product Engineering</a>
+        <a href="#services" class="trusted-item"><span>🧑‍💻</span> Custom Software Development</a>
+        <a href="#services" class="trusted-item"><span>☁️</span> Cloud & DevOps</a>
+        <a href="#services" class="trusted-item"><span>🧭</span> IT Consulting & Support</a>
+        <a href="#products" class="trusted-item"><span>🇮🇳</span> RetailCore POS</a>
       </div>
     </div>
   </div>
 </div>
 
 
-<!-- ══════════════════════════════════════ PROBLEM / SOLUTION ══ -->
-<section class="problem" id="about">
+<!-- ══════════════════════════════════════ SERVICES ══ -->
+<section class="features" id="services">
   <div class="container">
-    <div class="section-label">Why RetailCore</div>
-    <div class="section-title">Indian Retailers Deserve Better Software</div>
+    <div class="section-center">
+      <div class="section-label">What We Offer</div>
+      <h2 class="section-title">Services Built Around Your Business</h2>
+      <p class="section-sub">Whether you need something built from scratch or want to run a ready-made product, Atishvara covers the full lifecycle of your software.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🧩</div>
+        <h3>Product Engineering</h3>
+        <p>We design, build, and maintain in-house products end to end — like RetailCore POS — from first prototype to ongoing releases.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Roadmapping</span>
+          <span class="feat-tag">Full-Cycle Delivery</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🧑‍💻</div>
+        <h3>Custom Software Development</h3>
+        <p>Bespoke web, mobile, and desktop applications tailored to your workflows — built to fit your business, not the other way around.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Web & Mobile</span>
+          <span class="feat-tag">Desktop Apps</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">☁️</div>
+        <h3>Cloud & DevOps</h3>
+        <p>Cloud infrastructure, CI/CD pipelines, and managed hosting so your software stays reliable, secure, and easy to scale.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Infra Setup</span>
+          <span class="feat-tag">Managed Hosting</span>
+        </div>
+      </div>
+
+      <div class="feat-card reveal">
+        <div class="feat-icon">🧭</div>
+        <h3>IT Consulting & Support</h3>
+        <p>Technical advisory, staff augmentation, and ongoing support to help your team make the right calls and keep systems running.</p>
+        <div class="feat-tags">
+          <span class="feat-tag">Advisory</span>
+          <span class="feat-tag">Ongoing Support</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ PRODUCTS ══ -->
+<section class="products" id="products">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">Our Products</div>
+      <h2 class="section-title">Software We've Built, Ready to Use</h2>
+      <p class="section-sub">Alongside client engagements, we build our own products. RetailCore POS is our flagship — with more products on the way.</p>
+    </div>
+
+    <div class="products-grid reveal">
+
+      <div class="product-spotlight">
+        <span class="badge">Flagship Product</span>
+        <h3>RetailCore POS</h3>
+        <p>A modern, GST-native point-of-sale platform for Indian retailers — fast billing, live inventory, multi-store management, and one-click GSTR-1 / GSTR-3B export.</p>
+        <div class="product-highlights">
+          <span class="product-highlight">GST Native</span>
+          <span class="product-highlight">Works Offline</span>
+          <span class="product-highlight">Multi-Store Ready</span>
+          <span class="product-highlight">From ₹999/month</span>
+        </div>
+        <a href="#retailcore" class="btn btn-white">Explore RetailCore POS →</a>
+      </div>
+
+      <div class="product-placeholder">
+        <div class="fb-icon">➕</div>
+        <h3>More Products Coming Soon</h3>
+        <p>We're building more ready-made products for Indian businesses. Check back soon.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════ PROBLEM / SOLUTION ══ -->
+<section class="problem" id="retailcore">
+  <div class="container">
+    <div class="section-label">Product Deep-Dive · RetailCore POS</div>
+    <h2 class="section-title">Indian Retailers Deserve Better Software</h2>
 
     <div class="problem-grid reveal">
       <div>
@@ -1232,7 +1451,7 @@ footer {
   <div class="container">
     <div class="section-center">
       <div class="section-label">All-in-One Platform</div>
-      <div class="section-title">Everything Your Store Needs</div>
+      <h2 class="section-title">Everything Your Store Needs</h2>
       <p class="section-sub">From billing to inventory to GST reports — RetailCore POS covers every aspect of your retail business in one integrated system.</p>
     </div>
 
@@ -1349,24 +1568,24 @@ footer {
 
       <div class="gst-content">
         <div class="section-label">GST Native</div>
-        <div class="section-title">Built for Indian GST from the Ground Up</div>
+        <h2 class="section-title">Built for Indian GST from the Ground Up</h2>
         <p class="section-sub">GST is not a plugin or an add-on in RetailCore POS. It is woven into every single transaction automatically.</p>
 
         <div class="gst-cards">
           <div class="gst-mini">
-            <h4>CGST + SGST</h4>
+            <h3>CGST + SGST</h3>
             <p>Applied automatically on all intra-state sales. Tax split equally between Centre and State.</p>
           </div>
           <div class="gst-mini">
-            <h4>IGST</h4>
+            <h3>IGST</h3>
             <p>Applied automatically for inter-state B2B sales based on customer's GST state code.</p>
           </div>
           <div class="gst-mini">
-            <h4>GSTR-1 Export</h4>
+            <h3>GSTR-1 Export</h3>
             <p>B2B invoices and B2CS aggregates exported in JSON — directly uploadable to GST portal.</p>
           </div>
           <div class="gst-mini">
-            <h4>GSTR-3B Export</h4>
+            <h3>GSTR-3B Export</h3>
             <p>Monthly outward supply summary (Table 3.1) ready for your CA or direct filing.</p>
           </div>
         </div>
@@ -1374,7 +1593,7 @@ footer {
 
       <div class="gst-visual reveal">
         <div class="gst-panel">
-          <h4>🧾 Invoice #INV/2026-27/00049 — GST Breakdown</h4>
+          <h3>🧾 Invoice #INV/2026-27/00049 — GST Breakdown</h3>
 
           <div class="gst-row"><span class="gst-lbl">Customer</span><span class="gst-val">Patel Electronics, Ahmedabad</span></div>
           <div class="gst-row"><span class="gst-lbl">Customer GSTIN</span><span class="gst-val blue">24AABCP1234F1Z5</span></div>
@@ -1403,7 +1622,7 @@ footer {
   <div class="container">
     <div class="section-center">
       <div class="section-label">Simple Process</div>
-      <div class="section-title">Set Up in Under 30 Minutes</div>
+      <h2 class="section-title">Set Up in Under 30 Minutes</h2>
       <p class="section-sub">Getting RetailCore POS up and running is fast. No IT team required. No complex installation.</p>
     </div>
 
@@ -1475,35 +1694,35 @@ footer {
 
       <div>
         <div class="section-label">Multi-Store</div>
-        <div class="section-title">One Platform, Any Number of Stores</div>
+        <h2 class="section-title">One Platform, Any Number of Stores</h2>
         <p class="section-sub">Whether you have 1 shop or 50 branches, RetailCore POS keeps everything connected under a single company account.</p>
 
         <div class="ms-points">
           <div class="ms-point reveal">
             <div class="ms-point-icon">🔐</div>
             <div>
-              <h4>Complete Data Isolation</h4>
+              <h3>Complete Data Isolation</h3>
               <p>Each store's sales, stock, and customers are kept completely separate. Cashiers only see their own store.</p>
             </div>
           </div>
           <div class="ms-point reveal">
             <div class="ms-point-icon">📦</div>
             <div>
-              <h4>Inter-Store Stock Transfer</h4>
+              <h3>Inter-Store Stock Transfer</h3>
               <p>Transfer stock between stores instantly. Both stores' inventory updates automatically — no manual entry.</p>
             </div>
           </div>
           <div class="ms-point reveal">
             <div class="ms-point-icon">👤</div>
             <div>
-              <h4>Role-Based Access</h4>
+              <h3>Role-Based Access</h3>
               <p>Owner, Manager, Cashier, Viewer — each role sees only what they need. Staff cannot access financial data they shouldn't see.</p>
             </div>
           </div>
           <div class="ms-point reveal">
             <div class="ms-point-icon">📊</div>
             <div>
-              <h4>Consolidated Company Reports</h4>
+              <h3>Consolidated Company Reports</h3>
               <p>View total sales, GST, and inventory across all stores in one place. Compare store performance instantly.</p>
             </div>
           </div>
@@ -1519,8 +1738,8 @@ footer {
 <section class="pricing" id="pricing">
   <div class="container">
     <div class="section-center">
-      <div class="section-label">Simple Pricing</div>
-      <div class="section-title">Transparent Plans. No Hidden Costs.</div>
+      <div class="section-label">RetailCore POS Pricing</div>
+      <h2 class="section-title">Transparent Plans. No Hidden Costs.</h2>
       <p class="section-sub">All plans include all features for the plan tier. No per-user extra charges. Cancel anytime.</p>
 
       <div class="pricing-toggle">
@@ -1630,7 +1849,7 @@ footer {
   <div class="container">
     <div class="section-center">
       <div class="section-label">Customer Stories</div>
-      <div class="section-title">Trusted by Retailers Across India</div>
+      <h2 class="section-title">Trusted by Retailers Across India</h2>
       <p class="section-sub">Real feedback from store owners who switched to RetailCore POS.</p>
     </div>
 
@@ -1680,16 +1899,50 @@ footer {
 </section>
 
 
+<!-- ══════════════════════════════════════ ABOUT ATISHVARA ══ -->
+<section class="about-us" id="about">
+  <div class="container">
+    <div class="section-center">
+      <div class="section-label">About Us</div>
+      <h2 class="section-title">Why Atishvara</h2>
+      <p class="section-sub">We're a product-and-services IT company. We build software for clients, and we build our own products — held to the same bar either way.</p>
+    </div>
+
+    <!-- TODO: replace with real, up-to-date company figures -->
+    <div class="about-stats">
+      <div class="about-stat">
+        <div class="num">4+</div>
+        <div class="lbl">Core Services</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">1</div>
+        <div class="lbl">In-House Product</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">🇮🇳</div>
+        <div class="lbl">Made in India</div>
+      </div>
+      <div class="about-stat">
+        <div class="num">100%</div>
+        <div class="lbl">Client-Focused Delivery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 <!-- ══════════════════════════════════════ CTA ══ -->
 <section class="cta-section" id="contact">
   <div class="container">
-    <h2>Ready to Modernise Your Store?</h2>
-    <p>Join hundreds of Indian retailers already using RetailCore POS.<br/>Start your free trial today — no credit card required.</p>
+    <h2>Let's Build Something Together</h2>
+    <p>Whether you need custom software, cloud support, or want to try RetailCore POS —<br/>reach out and let's talk about your project.</p>
     <div class="cta-actions">
-      <a href="mailto:info@retailcore.in" class="btn btn-white btn-lg">📧 Email Us</a>
-      <a href="tel:+91" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">📞 Call for Demo</a>
+      <!-- TODO: replace with real contact email -->
+      <a href="mailto:info@atishvara.com" class="btn btn-white btn-lg">📧 Email Us</a>
+      <!-- TODO: replace with real phone number -->
+      <a href="tel:+911234567890" class="btn btn-outline btn-lg" style="border-color:rgba(255,255,255,.5); color:#fff;">📞 Call for Demo</a>
     </div>
-    <p class="cta-note">Free 30-day trial &nbsp;·&nbsp; No credit card needed &nbsp;·&nbsp; Setup support included</p>
+    <p class="cta-note">Free consultation &nbsp;·&nbsp; Custom quotes for services &nbsp;·&nbsp; 30-day free trial on RetailCore POS</p>
   </div>
 </section>
 
@@ -1701,42 +1954,42 @@ footer {
 
       <div class="footer-brand">
         <div class="nav-logo">
-          <div class="logo-icon">R</div>
-          RetailCore POS
+          <div class="logo-icon">A</div>
+          Atishvara
         </div>
-        <p>India's modern POS platform — built from the ground up for GST compliance, multi-store retail, and the Indian market.</p>
+        <p>A product-and-services IT company — building custom software, cloud solutions, and ready-made products like RetailCore POS for the Indian market.</p>
+        <!-- TODO: replace with real contact email -->
         <div class="footer-contact">
-          <div class="footer-contact-item"><span>📧</span> info@retailcore.in</div>
+          <div class="footer-contact-item"><span>📧</span> info@atishvara.com</div>
           <div class="footer-contact-item"><span>🇮🇳</span> Made in India</div>
         </div>
       </div>
 
       <div class="footer-col">
-        <h4>Product</h4>
+        <h4>Services</h4>
         <ul>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#gst">GST Compliance</a></li>
-          <li><a href="#multistore">Multi-Store</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#how">How It Works</a></li>
+          <li><a href="#services">Product Engineering</a></li>
+          <li><a href="#services">Custom Software Development</a></li>
+          <li><a href="#services">Cloud & DevOps</a></li>
+          <li><a href="#services">IT Consulting & Support</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Retail Segments</h4>
+        <h4>Products</h4>
         <ul>
-          <li><a href="#">Grocery & Kirana</a></li>
-          <li><a href="#">Fashion & Apparel</a></li>
-          <li><a href="#">Pharmacy</a></li>
-          <li><a href="#">Electronics</a></li>
-          <li><a href="#">Hardware Store</a></li>
+          <li><a href="#retailcore">RetailCore POS</a></li>
+          <li><a href="#gst">GST Compliance</a></li>
+          <li><a href="#multistore">Multi-Store</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#products">More Coming Soon</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Company</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
+          <li><a href="#about">About Us</a></li>
           <li><a href="#">Partner Program</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#">Privacy Policy</a></li>
@@ -1747,12 +2000,12 @@ footer {
     </div>
 
     <div class="footer-bottom">
-      <p>© 2026 RetailCore Technologies Pvt. Ltd. All rights reserved.</p>
+      <p>© 2026 Atishvara Technologies Pvt. Ltd. All rights reserved.</p>
       <div class="badges">
-        <span class="fb-badge">🇮🇳 GST Native</span>
+        <span class="fb-badge">🇮🇳 Made in India</span>
         <span class="fb-badge">🔐 Secure</span>
         <span class="fb-badge">☁️ Cloud-Ready</span>
-        <span class="fb-badge">📴 Works Offline</span>
+        <span class="fb-badge">🧩 Product & Services</span>
       </div>
     </div>
   </div>
@@ -1765,6 +2018,22 @@ footer {
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     navbar.classList.toggle('scrolled', window.scrollY > 30);
+  });
+
+  // Mobile nav toggle
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.classList.toggle('open', isOpen);
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+  navLinks.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
   });
 
   // Reveal on scroll
