@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Senior Java Architect Notes</title>
+<meta name="description" content="Interactive final-week revision app for the Senior Java Architect interview notes: read mode, search, flashcards, quiz, scenario drills, mock interviews, cheat sheets and progress tracking.">
+<meta name="theme-color" content="#0f1b2d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23c2410c'/%3E%3Ctext x='16' y='21' font-family='Arial' font-weight='700' font-size='13' fill='white' text-anchor='middle'%3EJA%3C/text%3E%3C/svg%3E">
+<script>
+/* apply theme + font size before first paint to avoid a flash */
+try { var s = JSON.parse(localStorage.getItem('sja-notes-progress-v1') || '{}').settings || {};
+  if (s.theme === 'light' || s.theme === 'dark') document.documentElement.setAttribute('data-theme', s.theme);
+  if (s.font) document.documentElement.style.fontSize = s.font + '%'; } catch (e) {}
+</script>
+<style>
+/*__CSS__*/
+</style>
+</head>
+<body>
+<a class="skip" href="#view">Skip to content</a>
+<header class="topbar">
+  <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Open chapters menu" aria-expanded="false" aria-controls="sidebar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+  <a class="brand" href="#home" aria-label="Senior Java Architect notes — home"><span class="brand-mark" aria-hidden="true">JA</span><span class="brand-text"><b>Senior Java Architect</b><span>Interview Notes · final-week revision</span></span></a>
+  <span class="spacer"></span>
+  <button class="icon-btn search-btn" id="search-btn" type="button" aria-label="Search (Ctrl+K or /)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span class="lbl">Search</span><kbd>Ctrl K</kbd></button>
+  <button class="icon-btn hide-sm" id="font-dec" type="button" aria-label="Decrease font size">A−</button>
+  <button class="icon-btn hide-sm" id="font-inc" type="button" aria-label="Increase font size">A+</button>
+  <button class="icon-btn" id="focus-btn" type="button" aria-label="Focus mode: hide sidebar" aria-pressed="false" title="Focus mode"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
+  <button class="icon-btn" id="theme-btn" type="button" aria-label="Theme"></button>
+  <button class="icon-btn" id="help-btn" type="button" aria-label="Keyboard shortcuts (?)">?</button>
+</header>
+<div class="layout">
+  <aside class="sidebar" id="sidebar" aria-label="Navigation"></aside>
+  <div class="backdrop" id="backdrop"></div>
+  <main><div id="view" class="content" tabindex="-1"></div></main>
+</div>
+
+<div class="overlay" id="search" hidden role="dialog" aria-modal="true" aria-label="Search notes">
+  <div class="modal">
+    <div class="modal-head">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+      <input id="search-input" type="search" placeholder="Search topics, questions, answers, code…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="search-results" aria-autocomplete="list" aria-label="Search">
+      <span id="search-count" class="muted" style="font-size:.8rem;white-space:nowrap" aria-live="polite"></span>
+      <button class="btn small" id="search-close" type="button">Esc</button>
+    </div>
+    <div class="modal-body"><ul class="results" id="search-results" role="listbox" aria-label="Search results"></ul></div>
+    <div class="modal-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span><kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+
+<div class="overlay" id="help" hidden role="dialog" aria-modal="true" aria-labelledby="help-title">
+  <div class="modal" style="width:min(520px,100%)">
+    <div class="modal-head"><h2 id="help-title" style="margin:0;font-size:1.05rem;flex:1">Keyboard shortcuts</h2><button class="btn small" id="help-close" type="button">Close</button></div>
+    <div class="modal-body"><div class="help-grid">
+      <span><kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd></span><span>Search everything</span>
+      <span><kbd>j</kbd> / <kbd>k</kbd></span><span>Next / previous topic</span>
+      <span><kbd>f</kbd> or <kbd>Space</kbd></span><span>Flip flashcard</span>
+      <span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd></span><span>Rate card: Again / Good / Easy</span>
+      <span><kbd>1</kbd>–<kbd>4</kbd>, <kbd>Enter</kbd></span><span>Quiz: pick an option, next question</span>
+      <span><kbd>←</kbd> <kbd>→</kbd></span><span>Move between topic tabs</span>
+      <span><kbd>?</kbd></span><span>This help</span>
+      <span><kbd>Esc</kbd></span><span>Close dialogs / end flashcard session</span>
+    </div></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+<!-- Content lives here. The UI renders entirely from this JSON (schema: meta + chapters[] → topics[] → parts). -->
+<script type="application/json" id="notes-data">/*__DATA__*/</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js" defer onload="window.dispatchEvent(new Event('hljs-ready'))"></script>
+<script>
+/*__JS__*/
+</script>
+</body>
+</html>
